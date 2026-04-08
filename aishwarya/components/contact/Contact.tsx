@@ -2,8 +2,17 @@
 
 import { useState } from "react";
 
+type FormType = {
+  name: string;
+  phone: string;
+  email: string;
+  roomType: string;
+  moveIn: string;
+  message: string;
+};
+
 export default function ContactSection() {
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<FormType>({
     name: "",
     phone: "",
     email: "",
@@ -12,11 +21,15 @@ export default function ContactSection() {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert("Thanks! We'll contact you shortly.");
   };
@@ -55,7 +68,9 @@ export default function ContactSection() {
 
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-envelope text-[#c8020e]"></i>
-              <span className="text-sm text-gray-700">info@aishwaryaresidences.com</span>
+              <span className="text-sm text-gray-700">
+                info@aishwaryaresidences.com
+              </span>
             </div>
           </div>
         </div>
@@ -147,7 +162,7 @@ export default function ContactSection() {
               </label>
               <textarea
                 name="message"
-                rows="3"
+                rows={3}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none"
               ></textarea>
