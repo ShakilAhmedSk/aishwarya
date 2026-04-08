@@ -78,8 +78,8 @@ export default function Navbar() {
             <button
               className={`px-3 md:px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition ${
                 scrolled
-                  ? "bg-sky-600 text-white"
-                  : "bg-sky-500 text-white"
+                  ? "bg-[#c8020e] text-white"
+                  : "bg-[#b9242e] text-white"
               }`}
             >
               Contact

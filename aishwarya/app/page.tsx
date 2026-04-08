@@ -17,8 +17,8 @@ export default function Home() {
       <Why />
       <Locations />
       <Units />
-      <Features />
-      <Community />
+      {/* <Features /> */}
+      {/* <Community /> */}
       <Testimonials />
       <FAQ />
       <Contact />

@@ -32,7 +32,7 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4 justify-center md:justify-start">
-            <button className="bg-sky-500 hover:bg-sky-600 px-6 py-3 rounded-xl">
+            <button className="bg-[#c8020e] hover:bg-[#b5232d] px-6 py-3 rounded-xl">
               Book Now
             </button>
 
