@@ -69,7 +69,7 @@ export default function ContactSection() {
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-envelope text-[#c8020e]"></i>
               <span className="text-sm text-gray-700">
-                info@aishwaryaresidences.com
+              aishwaryapgblr@gmail.com
               </span>
             </div>
           </div>
