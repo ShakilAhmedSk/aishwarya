@@ -50,7 +50,7 @@ export default function ContactSection() {
           </h2>
 
           <p className="text-gray-700 mb-8">
-            Aishwarya Residences offers premium PG living with comfort,
+            Aishwarya Residences offers premium Luxury Living  with comfort,
             security, and a vibrant lifestyle. Get in touch with us today.
           </p>
 
@@ -58,19 +58,23 @@ export default function ContactSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-map-marker-alt text-[#c8020e]"></i>
-              <span className="text-sm text-gray-700">Bengaluru, India</span>
+              <span className="text-sm text-gray-700">Venkateshwara Layout, S.G. Palya, Bengaluru, Karnataka 560030</span>
             </div>
 
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-phone text-[#c8020e]"></i>
-              <span className="text-sm text-gray-700">+91 98765 43210</span>
+              <span className="text-sm text-gray-700"> 9845389055 / 720466204</span>
             </div>
 
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-envelope text-[#c8020e]"></i>
+<<<<<<< HEAD
               <span className="text-sm text-gray-700">
                 info@aishwaryaresidences.com
               </span>
+=======
+              <span className="text-sm text-gray-700">aishwaryapgblr@gmail.com</span>
+>>>>>>> dev
             </div>
           </div>
         </div>

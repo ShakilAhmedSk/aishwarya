@@ -24,12 +24,12 @@ export default function About() {
           
           {/* HEADING */}
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 leading-snug">
-            Aishwarya Residences – Discover comfortable and modern PG living
+            Aishwarya Residences – Discover comfortable and modern  Luxury Living in Bengaluru
           </h2>
 
           {/* TEXT */}
           <p className="text-gray-600 leading-relaxed">
-            At Aishwarya Residences, we offer thoughtfully designed PG spaces 
+            At Aishwarya Residences, we offer thoughtfully designed Luxury Living  spaces 
             for both boys and girls across prime locations. Our residences are 
             built to provide comfort, safety, and convenience — all under one roof.
           </p>

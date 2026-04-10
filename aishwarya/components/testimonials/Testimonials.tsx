@@ -12,10 +12,10 @@ type Testimonial = {
 
 const data: Testimonial[] = [
   {
-    text: "Moving to Bangalore for work was not easy, but this PG gave me a homely environment and amazing community.",
-    name: "Rahul Sharma",
+    text: "Moving to Bangalore for work was not easy, but this Luxury Living  gave me a homely environment and amazing community.",
+    name: "Kritika",
     location: "Indiranagar",
-    image: "/rm1.avif",
+    image: "/Kritika.jpeg",
   },
   {
     text: "Clean rooms, great food, and very friendly people. Highly recommended!",
@@ -25,9 +25,9 @@ const data: Testimonial[] = [
   },
   {
     text: "Best decision to stay here. Safe, comfortable, and well maintained.",
-    name: "Sneha Roy",
+    name: "Chaitali",
     location: "Koramangala",
-    image: "/rm3.jpeg",
+    image: "/chaitali.jpeg",
   },
 ];
 

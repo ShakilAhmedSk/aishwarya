@@ -63,7 +63,7 @@ export default function Navbar() {
               height={40}
               priority
               className={`transition-all duration-300 ${
-                scrolled ? "" : "invert"
+                scrolled ? "" : ""
               }`}
             />
           </div>

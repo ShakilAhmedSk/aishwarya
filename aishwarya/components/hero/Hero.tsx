@@ -24,7 +24,7 @@ export default function Hero() {
         {/* LEFT SIDE */}
         <div className="text-center md:text-left space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Luxury PG Living <br /> in Bengaluru
+            Luxury Living <br /> in Bengaluru
           </h1>
 
           <p className="text-gray-300 max-w-md">
@@ -45,7 +45,7 @@ export default function Hero() {
         {/* RIGHT SIDE */}
         <div className="hidden md:block max-w-sm text-right">
           <p className="text-lg text-gray-200">
-            A premium co-living experience designed for comfort,
+            A premium living experience designed for comfort,
             convenience, and community.
           </p>
         </div>

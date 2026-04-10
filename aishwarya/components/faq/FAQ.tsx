@@ -9,25 +9,31 @@ type FAQ = {
 
 const faqs: FAQ[] = [
   {
-    question: "How do I make a reservation?",
+    question: " Where are the Aishwarya Residences located?",
     answer:
-      'Simply click on the "BOOK NOW" button on the top right of the page and enjoy the best rates - only available on our website!',
+      'Aishwarya Residences is located near Christ College, S.G. Palya, Bengaluru, within 1-minute walking distance from the campus.',
   },
   {
-    question: "Are there common areas to socialize?",
+    question: "What type of accommodation do you offer?",
     answer:
-      "Yes, we have shared lounges and co-working spaces where residents can relax and interact.",
+      "We offer premium PG accommodation with comfortable and well-designed rooms for a convenient living experience.",
   },
   {
-    question: "Can I cancel or modify my reservation?",
+    question: "How far is it from Christ College?",
     answer:
-      "Yes, you can modify or cancel your booking based on our cancellation policy.",
+      "Our PG is just a 1-minute walk from Christ College, making it extremely convenient for students.",
   },
   {
     question:
-      "How do I get to the PG from the airport or train station?",
+      "Is the PG suitable for students and working professionals?",
     answer:
-      "You can take a cab, metro, or local transport. We also provide directions after booking.",
+      "Yes, Aishwarya Residences is ideal for both students and working professionals.",
+  },
+  {
+    question:
+    "How can I book a room?",
+    answer:
+    "You can contact us directly via phone or visit our location to check availability and book your room.",
   },
 ];
 
@@ -73,11 +79,11 @@ export default function FAQSection() {
           </h2>
 
           <p>
-            Find answers to common questions about our Bangalore PG stays —
+            Find answers to common questions about our Bangalore Luxury Living stays —
             bookings, amenities, check-in time, and more.
           </p>
 
-          <button>show me more FAQ's</button>
+          <button>Show me more FAQs</button>
         </div>
 
       </div>
