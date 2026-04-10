@@ -20,6 +20,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [menuOpen]);
 
+  const handleScroll = () => {
+  const section = document.getElementById("contact") as HTMLDivElement | null;
+  section?.scrollIntoView({ behavior: "smooth" });
+};
+
   return (
     <>
       <header
@@ -81,6 +86,7 @@ export default function Navbar() {
                   ? "bg-[#c8020e] text-white"
                   : "bg-[#b9242e] text-white"
               }`}
+               onClick={handleScroll}
             >
               Contact
             </button>

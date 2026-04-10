@@ -9,10 +9,12 @@ import Testimonials from "@/components/testimonials/Testimonials";
 import FAQ from "@/components/faq/FAQ";
 import Contact from "@/components/contact/Contact";
 import Units from "@/components/units/Units";
+import LeadPopup from "@/components/LeadForm/LeadPopup";
 
 export default function Home() {
   return (
     <>
+    <LeadPopup/>
       <Hero />
       <About />
       <Why />

@@ -35,7 +35,8 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="relative py-20 px-6 bg-gradient-to-br from-[#f1e7e7] via-white to-[#f0d5e3] overflow-hidden">
+    <section id="contact"
+    className="relative py-20 px-6 bg-gradient-to-br from-[#f1e7e7] via-white to-[#f0d5e3] overflow-hidden">
 
       {/* Soft Background Blobs */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#c8020e]/20 blur-3xl rounded-full"></div>
