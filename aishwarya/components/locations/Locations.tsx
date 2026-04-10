@@ -8,7 +8,7 @@ export default function Locations() {
       {/* HEADING */}
       <h2>Our Location</h2>
       <p className="subtitle">
-        Visit our premium PG residence in Bangalore
+        Visit our premium Luxury Living  in Bangalore
       </p>
 
       <div className="location-container">
@@ -16,7 +16,7 @@ export default function Locations() {
         {/* LEFT - MAP */}
         <div className="map">
           <iframe
-            src="https://www.google.com/maps?q=Indiranagar%20Bangalore&output=embed"
+           src="https://www.google.com/maps?q=19%2C%20Ramaiah%20Garden%20Sadduguntepalya%20Rd%2C%20near%20Domino%27s%20Pizza%2C%20Venkateshwara%20Layout%2C%20S.G.%20Palya%2C%20Bengaluru%2C%20Karnataka%20560030&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -29,14 +29,15 @@ export default function Locations() {
           <h3>Aishwarya Residences</h3>
 
           <p>
-            123, 5th Main Road,<br />
-            Indiranagar Stage 2,<br />
-            Bangalore, Karnataka 560038
+            19, Ramaiah Garden Sadduguntepalya Rd,<br />
+            near Domino's Pizza, <br />
+           Venkateshwara Layout, S.G. Palya,<br/>
+           Bengaluru, Karnataka 560030
           </p>
 
           <p className="contact">
-            📞 +91 98765 43210 <br />
-            ✉️ info@aishwaryaresidences.com
+            📞 9845389055 / 720466204 <br />
+            ✉️ aishwaryapgblr@gmail.com
           </p>
 
           <button className="visit-btn">

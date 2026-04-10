@@ -55,7 +55,7 @@ export default function Why() {
             </h2>
 
             <p className="text-gray-700 text-lg leading-relaxed max-w-xl">
-              At Aishwarya Residences, we don’t just offer PG accommodation — we
+              At Aishwarya Residences, we don’t just offer Luxury Living  accommodation — we
               create a space that truly feels like home. With multiple locations
               for both boys and girls, our residences are thoughtfully designed
               for comfort, safety, and everyday ease.

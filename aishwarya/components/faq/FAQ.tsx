@@ -25,7 +25,7 @@ const faqs: FAQ[] = [
   },
   {
     question:
-      "How do I get to the PG from the airport or train station?",
+      "How do I get to the Luxury Living  from the airport or train station?",
     answer:
       "You can take a cab, metro, or local transport. We also provide directions after booking.",
   },
@@ -73,7 +73,7 @@ export default function FAQSection() {
           </h2>
 
           <p>
-            Find answers to common questions about our Bangalore PG stays —
+            Find answers to common questions about our Bangalore Luxury Living stays —
             bookings, amenities, check-in time, and more.
           </p>
 

@@ -24,7 +24,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm text-[#f1e7e7]">
-              Comfortable and affordable PG accommodations with modern amenities.
+              Comfortable and affordable Luxury Living  accommodations with modern amenities.
               Your home away from home.
             </p>
           </div>
@@ -55,13 +55,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <p className="text-sm text-[#f1e7e7] mb-2">
-              123, Main Street, Kolkata
+             19, Ramaiah Garden Sadduguntepalya Rd, near Domino's Pizza, Venkateshwara Layout, S.G. Palya, Bengaluru, Karnataka 560030
             </p>
             <p className="text-sm text-[#f1e7e7] mb-2">
-              +91 98765 43210
+              9845389055 / 720466204
             </p>
             <p className="text-sm text-[#f1e7e7] mb-4">
-              info@aishwaryaresidences.com
+               aishwaryapgblr@gmail.com
             </p>
 
             {/* Social Icons */}
