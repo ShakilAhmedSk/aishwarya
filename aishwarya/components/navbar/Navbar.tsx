@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import LeadPopup from "../LeadForm/LeadPopup";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,9 +26,15 @@ export default function Navbar() {
   const section = document.getElementById("contact") as HTMLDivElement | null;
   section?.scrollIntoView({ behavior: "smooth" });
 };
+const pathname = usePathname();
+const base = "cursor-pointer transition";
+  const active = "text-[#c8020e]";
+  const inactive = "text-white hover:text-[#c8020e]";
 
+const [openPopup,setOpenPopup]=useState(false)
   return (
     <>
+     {openPopup && <LeadPopup/>}
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           scrolled
@@ -52,11 +60,38 @@ export default function Navbar() {
             </div>
 
             {/* MENU (DESKTOP ONLY) */}
-            <nav className="hidden md:flex gap-6 lg:gap-8 text-sm font-medium">
-              <Link href="#">Our Locations</Link>
-              <Link href="#">Community</Link>
-              <Link href="#">Stay With Us</Link>
-            </nav>
+             <nav className="hidden md:flex gap-6 lg:gap-8 text-sm font-medium">
+
+      <Link
+        href="/"
+        className={`${base} ${pathname === "/" ? active : inactive}`}
+      >
+        Home
+      </Link>
+
+      <Link
+        href="/locations"
+        className={`${base} ${pathname === "/locations" ? active : inactive}`}
+      >
+        Our Locations
+      </Link>
+
+      <Link
+        href="/community"
+        className={`${base} ${pathname === "/community" ? active : inactive}`}
+      >
+        Community
+      </Link>
+
+      {/* POPUP */}
+      <span
+        onClick={() => setOpenPopup(true)}
+        className={`${base} ${openPopup ? active : inactive}`}
+      >
+        Stay With Us
+      </span>
+
+    </nav>
           </div>
 
           {/* 🔥 CENTER LOGO (DESKTOP ONLY) */}
@@ -81,7 +116,7 @@ export default function Navbar() {
             </span>
 
             <button
-              className={`px-3 md:px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition ${
+              className={`px-3 md:px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition cursor-pointer ${
                 scrolled
                   ? "bg-[#c8020e] text-white"
                   : "bg-[#b9242e] text-white"
