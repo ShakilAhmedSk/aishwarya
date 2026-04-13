@@ -6,27 +6,23 @@ import "./Testimonials.css";
 type Testimonial = {
   text: string;
   name: string;
-  location: string;
   image: string;
 };
 
 const data: Testimonial[] = [
   {
-    text: "Moving to Bangalore for work was not easy, but this Luxury Living  gave me a homely environment and amazing community.",
+    text: "Moving to Bangalore for work was not easy, but this Luxury Living gave me a homely environment and amazing community.",
     name: "Kritika",
-    location: "Indiranagar",
     image: "/Kritika.jpeg",
   },
   {
     text: "Clean rooms, great food, and very friendly people. Highly recommended!",
     name: "Amit Verma",
-    location: "Whitefield",
     image: "/rm2.avif",
   },
   {
     text: "Best decision to stay here. Safe, comfortable, and well maintained.",
     name: "Chaitali",
-    location: "Koramangala",
     image: "/chaitali.jpeg",
   },
 ];
@@ -35,7 +31,6 @@ export default function Testimonials() {
   const [index, setIndex] = useState<number>(0);
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
-  // 🔥 AUTO SLIDE
   useEffect(() => {
     if (isHovered) return;
 
@@ -66,12 +61,10 @@ export default function Testimonials() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* LEFT */}
         <button className="arrow left" onClick={prevSlide}>
           &#8249;
         </button>
 
-        {/* SLIDER */}
         <div className="slider">
           <div
             className="slider-track"
@@ -81,9 +74,7 @@ export default function Testimonials() {
               <div className="testimonial-card" key={i}>
                 <div className="text">
                   <p>"{item.text}"</p>
-                  <h4>
-                    {item.name}, {item.location}
-                  </h4>
+                  <h4>{item.name}</h4>
                 </div>
 
                 <div className="image">
@@ -99,7 +90,6 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* RIGHT */}
         <button className="arrow right" onClick={nextSlide}>
           &#8250;
         </button>

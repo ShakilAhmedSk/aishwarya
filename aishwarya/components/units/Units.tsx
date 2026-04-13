@@ -8,14 +8,14 @@ import PropertyCardsFour from "./PropertyCardsFour";
 import PropertyCardsFive from "./PropertyCardsFive";
 
 
-type TabType = "Aishwarya Aurus" | "Aishwarya Solaris" | "Aishwarya 9" | "Aishwarya Sunshine" | "Aishwarya Gardenia";
+type TabType = "Aishwarya estrella" | "Aishwarya Solaris" | "Aishwarya 9" | "Aishwarya Sunshine" | "Aishwarya Gardenia";
 
 export default function Units() {
-  const [activeTab, setActiveTab] = useState<TabType>("Aishwarya Aurus");
+  const [activeTab, setActiveTab] = useState<TabType>("Aishwarya estrella");
 
   const renderTabContent = () => {
     switch (activeTab) {
-      case "Aishwarya Aurus":
+      case "Aishwarya estrella":
         return <PropertyCards/>;
       case "Aishwarya Solaris":
         return <PropertyCardsTwo/>;
@@ -45,7 +45,7 @@ export default function Units() {
         <div className="pg-tabs-wrapper">
       <div className="pg-tabs-header">
         
-        {["Aishwarya Aurus", "Aishwarya Solaris", "Aishwarya 9", "Aishwarya Sunshine", "Aishwarya Gardenia"].map(
+        {["Aishwarya Estrella", "Aishwarya Solaris", "Aishwarya 9", "Aishwarya Sunshine", "Aishwarya Gardenia"].map(
           (tab) => (
             <button
               key={tab}

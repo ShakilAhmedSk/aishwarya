@@ -25,9 +25,9 @@ const faqs: FAQ[] = [
   },
   {
     question:
-      "Is the PG suitable for students and working professionals?",
+      "Is food included in the stay?",
     answer:
-      "Yes, Aishwarya Residences is ideal for both students and working professionals.",
+      "Yes, we provide 4times hygienic and nutritious meals as part of the package.",
   },
   {
     question:
