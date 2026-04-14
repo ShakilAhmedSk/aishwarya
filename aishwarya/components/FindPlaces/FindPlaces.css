@@ -1,0 +1,218 @@
+/* ===== Find Place Hero ===== */
+
+.find-place-unique {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+/* Background image */
+.find-place-bg-unique {
+  object-fit: cover;
+}
+
+/* Dark overlay */
+.find-place-overlay-unique {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Content */
+.find-place-content-unique {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* Heading */
+.find-place-content-unique h1 {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+/* Aishwarya Residence Section */
+/* SECTION */
+.ar-section {
+  padding: 40px;
+  background-color: #f1e7e7;
+}
+
+/* FILTER BAR */
+/* FILTER BAR CONTAINER */
+.ar-filter-bar {
+  background: #e9dfd6;
+  border-radius: 40px;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+/* LEFT TEXT */
+.ar-filter-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #c8020e;
+  font-weight: 500;
+}
+
+.ar-filter-left i {
+  background: #c8020e;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+/* RIGHT SIDE */
+.ar-filter-right {
+    color: #000;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* DROPDOWN STYLE */
+.ar-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border-radius: 25px;
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.ar-dropdown i {
+  color: #666;
+  font-size: 13px;
+}
+
+/* HOVER EFFECT */
+.ar-dropdown:hover {
+  border-color: #c8020e;
+}
+
+.ar-dropdown:hover span {
+  color: #c8020e;
+}
+
+/* GRID */
+.ar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.ar-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.ar-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.ar-img-box {
+  position: relative;
+  height: 200px;
+}
+
+.ar-img {
+  object-fit: cover;
+}
+
+/* BADGE */
+.ar-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #c8020e;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* CONTENT */
+.ar-content {
+  padding: 15px;
+}
+
+.ar-location {
+  font-size: 13px;
+  color: #777;
+}
+
+.ar-title {
+  font-size: 18px;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+/* INFO ROW */
+.ar-info {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* BOTTOM */
+.ar-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ar-price {
+  color: #000;
+  font-weight: 500;
+}
+
+.ar-price span {
+  color: #c8020e;
+}
+
+/* BUTTON */
+.ar-btn {
+  background: #c8020e;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.ar-btn:hover {
+  opacity: 0.9;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .find-place-unique {
+    height: 200px;
+  }
+
+  .find-place-content-unique h1 {
+    font-size: 28px;
+  }
+}

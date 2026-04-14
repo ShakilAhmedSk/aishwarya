@@ -3,7 +3,7 @@ import "./Locations.css";
 
 export default function Locations() {
   return (
-    <section className="location-section">
+    <section className="location-section" id="location">
       {/* HEADING */}
       <h2>Our Location</h2>
       <p className="subtitle">Visit our premium Luxury Living in Bangalore</p>

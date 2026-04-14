@@ -1,0 +1,353 @@
+/* ===== Stay Hero Section ===== */
+
+.stay-hero-unique {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+/* Background Image */
+.stay-hero-bg-unique {
+  object-fit: cover;
+}
+
+/* Overlay */
+.stay-hero-overlay-unique {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.55)
+  );
+  z-index: 1;
+}
+
+/* Content */
+.stay-hero-content-unique {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Title */
+.stay-hero-title-unique {
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Subtitle */
+.stay-hero-subtitle-unique {
+  font-size: 18px;
+  opacity: 0.9;
+}
+/* ===== Aishwarya Concept Section ===== */
+
+.aish-concept-unique {
+  padding: 80px 20px;
+  background: #f1e7e7; /* light background */
+  text-align: center;
+}
+
+/* Header */
+.aish-concept-header-unique h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #c8020e; /* primary red */
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.aish-concept-header-unique p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+/* Grid */
+.aish-concept-grid-unique {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Card */
+.aish-card-unique {
+  text-align: left;
+}
+
+/* Image */
+.aish-card-img-unique {
+  position: relative;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 25px rgba(200, 2, 14, 0.15); /* red tint shadow */
+}
+
+.aish-img-unique {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Hover zoom */
+.aish-card-img-unique:hover .aish-img-unique {
+  transform: scale(1.05);
+}
+
+/* Title on image */
+.aish-card-title-unique {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Text */
+.aish-card-unique p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Optional red accent line */
+.aish-card-unique p::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #c8020e;
+  margin-bottom: 10px;
+}
+
+/* ===== Aishwarya Steps Section ===== */
+
+.aish-steps-unique {
+  padding: 80px 20px 0px;
+  background: #f1e7e7;
+  border-radius: 30px;
+  margin: 40px 20px;
+}
+
+/* Header */
+.aish-steps-header-unique {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.aish-steps-header-unique h2 {
+  font-size: 36px;
+  color: #c8020e;
+  margin-bottom: 10px;
+}
+
+.aish-steps-header-unique p {
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+/* Grid */
+.aish-steps-grid-unique {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+.aish-step-card-unique {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: left;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(200, 2, 14, 0.1);
+}
+
+/* Hover effect */
+.aish-step-card-unique:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(200, 2, 14, 0.15);
+}
+
+/* Step Number */
+.aish-step-number-unique {
+  font-size: 26px;
+  font-weight: bold;
+  color: #c8020e;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.aish-step-card-unique h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+/* Description */
+.aish-step-card-unique p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+/* ===== Aishwarya CTA Section ===== */
+
+.aish-cta-unique {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  background: #f0d5e3;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 40px 20px;
+}
+
+/* Image */
+.aish-cta-imgWrap-unique {
+  position: relative;
+  height: 350px;
+}
+
+.aish-cta-img-unique {
+  object-fit: cover;
+}
+
+/* Overlay (subtle glass feel) */
+.aish-cta-overlay-unique {
+  position: absolute;
+  inset: 0;
+  background: rgba(200, 2, 14, 0.15);
+}
+
+/* Content */
+.aish-cta-content-unique {
+  padding: 40px;
+}
+
+.aish-cta-content-unique h2 {
+  font-size: 34px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+/* Paragraph */
+.aish-cta-content-unique p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 25px;
+  max-width: 400px;
+}
+
+/* Button */
+.aish-cta-btn-unique {
+  background: #c8020e;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Button Hover */
+.aish-cta-btn-unique:hover {
+  background: #a0010b;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .aish-cta-unique {
+    grid-template-columns: 1fr;
+  }
+
+  .aish-cta-imgWrap-unique {
+    height: 220px;
+  }
+
+  .aish-cta-content-unique {
+    text-align: center;
+    padding: 20px 0px;
+  }
+
+  .aish-cta-content-unique p {
+    margin: 0 auto 20px;
+  }
+  .aish-steps-unique{
+    margin: 40px 0px 20px;
+    padding: 0px;
+  }
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .aish-steps-grid-unique {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .aish-steps-grid-unique {
+    grid-template-columns: 1fr;
+  }
+
+  .aish-steps-header-unique h2 {
+    font-size: 26px;
+  }
+  .aish-cta-content-unique h2{
+    font-size: 26px;
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .aish-concept-grid-unique {
+    grid-template-columns: 1fr;
+  }
+
+  .aish-card-img-unique {
+    height: 220px;
+  }
+
+  .aish-concept-header-unique h2 {
+    font-size: 26px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stay-hero-unique {
+    height: 260px;
+    border-radius: 20px;
+  }
+
+  .stay-hero-title-unique {
+    font-size: 28px;
+  }
+
+  .stay-hero-subtitle-unique {
+    font-size: 14px;
+  }
+}

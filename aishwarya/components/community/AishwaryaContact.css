@@ -1,0 +1,119 @@
+.ar-wrap {
+  display: flex;
+  gap: 40px;
+  padding: 50px;
+  background: #f0d5e3;
+  color: #fff;
+  border-radius: 28px;
+}
+
+/* LEFT */
+.ar-left {
+    color: #000;
+  flex: 1;
+}
+
+.ar-ttl {
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+.ar-desc {
+  line-height: 1.6;
+  color: #000;
+}
+
+/* RIGHT */
+.ar-right {
+  flex: 1.5;
+}
+
+.ar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ROW */
+.ar-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* INPUTS */
+.ar-inp,
+.ar-sel,
+.ar-txt {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  background: #f1e7e7;
+  font-size: 14px;
+  color: #333;
+}
+
+/* PHONE */
+.ar-phone {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.ar-phone .ar-sel {
+  width: 40%;
+}
+
+.ar-phone .ar-inp {
+  width: 60%;
+}
+
+/* FULL */
+.ar-full {
+  width: 100%;
+}
+
+/* TEXTAREA */
+.ar-txt {
+  border-radius: 18px;
+  resize: none;
+}
+
+/* CHECK */
+.ar-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #f1e7e7;
+}
+
+/* BUTTON */
+.ar-btn {
+  width: 120px;
+  padding: 12px;
+  border-radius: 24px;
+  border: none;
+  background: #fff;
+  color: #c8020e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ar-btn:hover {
+  background: #f1e7e7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .ar-wrap {
+    flex-direction: column;
+    padding: 28px;
+  }
+
+  .ar-row {
+    flex-direction: column;
+  }
+}

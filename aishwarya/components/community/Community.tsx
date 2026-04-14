@@ -1,7 +1,9 @@
 import Testimonials from "../testimonials/Testimonials";
+import AishwaryaContact from "./AishwaryaContact";
 import CommunityHero from "./CommunityHero";
 import CommunityTabs from "./CommunityTabs";
 import Curators from "./Curators";
+import EventsSection from "./EventsSection";
 import Neighbour from "./Neighbour";
 
 export default function Community() {
@@ -12,7 +14,9 @@ export default function Community() {
       <Neighbour/>
       <CommunityTabs/>
       <Curators/>
+      <EventsSection/>
       <Testimonials/>
+      <AishwaryaContact/>
     </>
   )
    

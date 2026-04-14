@@ -70,7 +70,7 @@ const [openPopup,setOpenPopup]=useState(false)
       </Link>
 
       <Link
-        href="/locations"
+        href="#locations"
         className={`${base} ${pathname === "/locations" ? active : inactive}`}
       >
         Our Locations
@@ -84,12 +84,12 @@ const [openPopup,setOpenPopup]=useState(false)
       </Link>
 
       {/* POPUP */}
-      <span
-        onClick={() => setOpenPopup(true)}
+      <Link
+        href={'/Stay-with-us'}
         className={`${base} ${openPopup ? active : inactive}`}
       >
         Stay With Us
-      </span>
+      </Link>
 
     </nav>
           </div>
@@ -111,9 +111,10 @@ const [openPopup,setOpenPopup]=useState(false)
           {/* 🔥 RIGHT SIDE */}
           <div className="flex items-center gap-3 md:gap-6 text-sm">
             
-            <span className="hidden lg:block">
+            <Link href={'/FInd-your-Place'}
+            className="hidden lg:block">
               Find Your Place
-            </span>
+            </Link>
 
             <button
               className={`px-3 md:px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition cursor-pointer ${
