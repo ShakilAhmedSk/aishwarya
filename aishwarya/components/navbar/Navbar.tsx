@@ -5,11 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import LeadPopup from "../LeadForm/LeadPopup";
 import { usePathname } from "next/navigation";
+import useScrollNav from "../Utils/useScrollNav";
 
 export default function Navbar() {
+  const {handleNavScroll}=useScrollNav()
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -70,7 +72,7 @@ const [openPopup,setOpenPopup]=useState(false)
       </Link>
 
       <Link
-        href="#locations"
+        href="/our-locations"
         className={`${base} ${pathname === "/locations" ? active : inactive}`}
       >
         Our Locations
@@ -122,7 +124,7 @@ const [openPopup,setOpenPopup]=useState(false)
                   ? "bg-[#c8020e] text-white"
                   : "bg-[#b9242e] text-white"
               }`}
-               onClick={handleScroll}
+               onClick={()=>handleNavScroll("contact")}
             >
               Contact
             </button>

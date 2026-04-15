@@ -50,7 +50,7 @@ export default function AishwaryaResidences() {
       <select className="ar-native-select">
   <option value="">Select city</option>
   <option value="bangalore">Bangalore</option>
-  <option value="london">London</option>
+  
 </select>
       
     </div>

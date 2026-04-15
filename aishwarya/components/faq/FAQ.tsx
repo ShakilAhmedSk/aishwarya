@@ -171,7 +171,7 @@ export default function FAQSection() {
   const isAllShown = visibleCount >= faqs.length;
 
   return (
-    <div className="faq-section">
+    <div className="faq-section" id="faq">
       <div className="faq-container">
 
         {/* LEFT */}

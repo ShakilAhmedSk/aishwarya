@@ -2,8 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import useScrollNav from "../Utils/useScrollNav";
+
 
 export default function Footer() {
+  const {handleNavScroll}=useScrollNav()
   return (
     <footer className="bg-[#c8020e] text-white" style={{color:"white"}}>
       <div className="max-w-7xl mx-auto px-6 py-12">
@@ -47,9 +50,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-[#f0d5e3]">
+                <li 
+                onClick={()=>handleNavScroll("contact")}
+                 className="hover:text-[#f0d5e3] cursor-pointer">
                   Contact
-                </Link>
+                </li>
               </li>
             </ul>
           </div>
@@ -58,9 +63,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-[#f1e7e7]">
-              <li>Blog</li>
-              <li>Facilities</li>
-              <li>FAQ</li>
+              <li className="cursor-pointer">Blog</li>
+              <li className="cursor-pointer">Facilities</li>
+              <li className="cursor-pointer"
+              onClick={()=>handleNavScroll("faq")}>FAQ</li>
             </ul>
           </div>
 
