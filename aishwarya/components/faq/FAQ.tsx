@@ -16,12 +16,12 @@
 //   {
 //     question: "What type of accommodation do you offer?",
 //     answer:
-//       "We offer premium PG accommodation with comfortable and well-designed rooms for a convenient living experience.",
+//       "We offer premium  accommodation with comfortable and well-designed rooms for a convenient living experience.",
 //   },
 //   {
 //     question: "How far is it from Christ College?",
 //     answer:
-//       "Our PG is just a 1-minute walk from Christ College, making it extremely convenient for students.",
+//       "Our Aishwarya Residence is just a 1-minute walk from Christ College, making it extremely convenient for students.",
 //   },
 //   {
 //     question:
@@ -108,17 +108,17 @@ const faqs: FAQ[] = [
   {
     question: "What type of accommodation do you offer?",
     answer:
-      "We offer premium PG accommodation with comfortable and well-designed rooms for a convenient living experience.",
+      "We offer premium  accommodation with comfortable and well-designed rooms for a convenient living experience.",
   },
   {
     question: "How far is it from Christ College?",
     answer:
-      "Our PG is just a 1-minute walk from Christ College, making it extremely convenient for students.",
+      "Our Aishwarya Residence is just a 1-minute walk from Christ College, making it extremely convenient for students.",
   },
   {
     question: "Is food included in the stay?",
     answer:
-      "Yes, we provide 4times hygienic and nutritious meals as part of the package.",
+      "Yes, we provide 4 times hygienic and nutritious meals as part of the package.",
   },
   {
     question: "How can I book a room?",

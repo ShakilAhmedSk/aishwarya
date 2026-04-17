@@ -40,92 +40,95 @@ export default function Why() {
   ];
 
   return (
-    <section className="bg-[#f1e7e7] text-black py-16 sm:py-20 md:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        
-        <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-16 items-center">
-          
-          {/* LEFT CONTENT */}
-          <div className="space-y-6 md:space-y-8">
-            
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+    <section className="bg-[#f1e7e7] text-black py-14 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+
+          {/* LEFT */}
+          <div className="space-y-5 sm:space-y-6 md:space-y-8 text-center md:text-left">
+
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Why Choose <br />
               <span className="text-[#c8020e]">
                 Aishwarya Residences?
               </span>
             </h2>
 
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-xl">
+            <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
               At Aishwarya Residences, we don’t just offer accommodation — we
               create a space that truly feels like home. Designed for comfort,
               safety, and ease.
             </p>
 
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-xl">
+            <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
               Clean living spaces, essential amenities, and reliable management
               ensure a smooth, worry-free stay.
             </p>
 
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-xl">
+            <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
               Blending affordability with quality, where convenience meets calm.
             </p>
           </div>
 
           {/* RIGHT SLIDER */}
           <div className="relative w-full">
+
             <Swiper
               modules={[Autoplay]}
               slidesPerView={1}
+              spaceBetween={20}
               loop
               speed={800}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
               }}
-              touchRatio={1}
-              grabCursor={true}
+              observer={true}
+              observeParents={true}
+              grabCursor
               onSwiper={(swiper) => (swiperRef.current = swiper)}
               className="w-full"
             >
               {slides.map((item) => (
                 <SwiperSlide key={item.id}>
-                  
-                  {/* ✅ FIXED HEIGHT CARD */}
-                  <div className="relative w-full h-[260px] sm:h-[320px] md:h-[420px] lg:h-[500px] rounded-2xl overflow-hidden group">
-                    
+                  <div className="relative w-full h-[260px] sm:h-[320px] md:h-[420px] lg:h-[500px] xl:h-[540px] rounded-2xl overflow-hidden group">
+
+                    {/* IMAGE */}
                     <Image
                       src={item.img}
                       alt={item.title}
                       fill
+                      priority={item.id === 1}
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      priority={item.id === 1} // optional for first image
                     />
 
-                    {/* GRADIENT */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                    {/* OVERLAY */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
                     {/* CONTENT */}
-                    <div className="absolute bottom-3 sm:bottom-4 md:bottom-8 left-3 sm:left-4 md:left-8 right-3 sm:right-4 md:right-8 text-white">
-                      
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 md:mb-2">
+                    <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 right-4 sm:right-6 md:right-8 text-white">
+
+                      <h3 className="text-base sm:text-lg md:text-2xl font-semibold mb-1 md:mb-2">
                         {item.title}
                       </h3>
 
-                      <p className="text-xs sm:text-sm text-gray-200 mb-2 md:mb-3 leading-tight">
+                      <p className="text-xs sm:text-sm md:text-base text-gray-200 mb-2 md:mb-4 leading-snug">
                         {item.desc}
                       </p>
 
-                      <button className="border border-white px-4 py-1.5 md:px-5 md:py-2 rounded-full text-xs md:text-sm hover:bg-white hover:text-[#c8020e] transition">
+                      <button className="border border-white px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2 rounded-full text-xs sm:text-sm hover:bg-white hover:text-[#c8020e] transition">
                         Read More
                       </button>
                     </div>
-                  </div>
 
+                  </div>
                 </SwiperSlide>
               ))}
             </Swiper>
 
-            {/* RIGHT ARROW */}
+            {/* ARROW */}
             <button
               className="absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 
               bg-[#c8020e] text-white p-2 sm:p-3 md:p-4 rounded-full 
@@ -134,6 +137,7 @@ export default function Why() {
             >
               →
             </button>
+
           </div>
 
         </div>

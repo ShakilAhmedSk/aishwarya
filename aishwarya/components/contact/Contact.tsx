@@ -24,7 +24,7 @@ export default function ContactSection() {
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -35,15 +35,15 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact"
-    className="relative py-20 px-6 bg-gradient-to-br from-[#f1e7e7] via-white to-[#f0d5e3] overflow-hidden">
-
+    <section
+      id="contact"
+      className="relative py-20 px-6 bg-gradient-to-br from-[#f1e7e7] via-white to-[#f0d5e3] overflow-hidden"
+    >
       {/* Soft Background Blobs */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#c8020e]/20 blur-3xl rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-pink-300/20 blur-3xl rounded-full"></div>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-
         {/* LEFT CONTENT */}
         <div>
           <h2 className="text-4xl font-bold text-[#c8020e] mb-4">
@@ -51,7 +51,7 @@ export default function ContactSection() {
           </h2>
 
           <p className="text-gray-700 mb-8">
-            Aishwarya Residences offers premium Luxury Living  with comfort,
+            Aishwarya Residences offers premium Luxury Living with comfort,
             security, and a vibrant lifestyle. Get in touch with us today.
           </p>
 
@@ -59,18 +59,23 @@ export default function ContactSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-map-marker-alt text-[#c8020e]"></i>
-              <span className="text-sm text-gray-700">Venkateshwara Layout, S.G. Palya, Bengaluru, Karnataka 560030</span>
+              <span className="text-sm text-gray-700">
+                No. 76, 2nd Cross Rd, Adugodi, Bengaluru – 560030{" "}
+              </span>
             </div>
 
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-phone text-[#c8020e]"></i>
-              <span className="text-sm text-gray-700"> 9845389055 / 720466204</span>
+              <span className="text-sm text-gray-700">
+                {" "}
+                9845389055 / 720466204
+              </span>
             </div>
 
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-envelope text-[#c8020e]"></i>
               <span className="text-sm text-gray-700">
-              aishwaryapgblr@gmail.com
+                aishwaryapgblr@gmail.com
               </span>
             </div>
           </div>
@@ -78,13 +83,11 @@ export default function ContactSection() {
 
         {/* RIGHT FORM */}
         <div className="bg-white/90 backdrop-blur-xl border border-white/40 rounded-3xl shadow-xl p-8">
-
           <h3 className="text-2xl font-semibold text-[#c8020e] mb-6">
             Enquiry Form
           </h3>
 
           <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-5">
-
             {/* Name */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -134,7 +137,11 @@ export default function ContactSection() {
               <select
                 name="roomType"
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 
+                bg-white text-gray-800 appearance-none
+                focus:ring-2 focus:ring-[#c8020e] 
+                focus:border-[#c8020e]
+                outline-none transition"
               >
                 <option value="">Select Room</option>
                 <option value="single">Single Sharing</option>
@@ -144,17 +151,16 @@ export default function ContactSection() {
             </div>
 
             {/* Move-in */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Move-in Date
-              </label>
-              <input
-                type="date"
-                name="moveIn"
-                onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none"
-              />
-            </div>
+            <input
+              type="date"
+              name="moveIn"
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded-lg px-4 py-2.5 
+              bg-white text-gray-800 
+              focus:ring-2 focus:ring-[#c8020e] 
+              focus:border-[#c8020e]
+              outline-none transition"
+            />
 
             {/* Message */}
             <div>
@@ -165,8 +171,12 @@ export default function ContactSection() {
                 name="message"
                 rows={3}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none"
-              ></textarea>
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 
+                bg-white text-gray-800 placeholder-gray-400
+                focus:ring-2 focus:ring-[#c8020e] 
+                focus:border-[#c8020e]
+                outline-none transition resize-none"
+              />
             </div>
 
             {/* Button */}
@@ -176,10 +186,8 @@ export default function ContactSection() {
             >
               Submit Inquiry
             </button>
-
           </form>
         </div>
-
       </div>
     </section>
   );
