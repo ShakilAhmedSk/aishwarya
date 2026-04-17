@@ -3,7 +3,7 @@ import "./OurLocations.css";
 
 const locations = [
   {
-    title: "Aishwarya Aurus",
+    title: "Aishwarya Estrella",
     area: "S.G Palya, Bangalore",
     subtitle: "Near Christ Front Gate",
     img: "/pgr.jpg",

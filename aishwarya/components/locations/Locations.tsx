@@ -12,11 +12,13 @@ export default function Locations() {
         {/* LEFT - MAP */}
         <div className="map">
           <iframe
-            src="https://www.google.com/maps?q=19%2C%20Ramaiah%20Garden%20Sadduguntepalya%20Rd%2C%20near%20Domino%27s%20Pizza%2C%20Venkateshwara%20Layout%2C%20S.G.%20Palya%2C%20Bengaluru%2C%20Karnataka%20560030&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5555689794587!2d77.6090201!3d12.9362613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae144d17fa3f57%3A0x51a2f6ff51dcde58!2sAishwarya%20Residences!5e0!3m2!1sen!2sin!4v1776408084681!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
           ></iframe>
         </div>
 

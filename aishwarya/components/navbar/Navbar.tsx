@@ -46,10 +46,8 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 h-[70px] md:h-[80px] flex items-center justify-between relative">
-
           {/* LEFT */}
           <div className="flex items-center gap-6">
-
             {/* MOBILE LOGO */}
             <div className="md:hidden">
               <Image
@@ -64,7 +62,6 @@ export default function Navbar() {
 
             {/* DESKTOP MENU */}
             <nav className="hidden md:flex gap-6 lg:gap-8 text-sm">
-
               <Link
                 href="/"
                 className={`${base} ${pathname === "/" ? active : inactive}`}
@@ -98,7 +95,6 @@ export default function Navbar() {
               >
                 Stay With Us
               </Link>
-
             </nav>
           </div>
 
@@ -115,7 +111,6 @@ export default function Navbar() {
 
           {/* RIGHT */}
           <div className="flex items-center gap-3 md:gap-6 text-sm">
-
             {/* FIND YOUR PLACE */}
             <Link
               href="/find-your-place"
@@ -130,9 +125,7 @@ export default function Navbar() {
             <button
               onClick={() => handleNavScroll("contact")}
               className={`px-3 md:px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition ${
-                scrolled
-                  ? "bg-[#c8020e] text-white"
-                  : "bg-[#b9242e] text-white"
+                scrolled ? "bg-[#c8020e] text-white" : "bg-[#b9242e] text-white"
               }`}
             >
               Contact
@@ -152,7 +145,6 @@ export default function Navbar() {
       {/* 📱 MOBILE MENU */}
       {menuOpen && (
         <div className="fixed top-[70px] left-0 w-full bg-black/95 text-white z-40 flex flex-col items-center gap-6 py-8 md:hidden">
-
           <Link href="/our-locations" onClick={() => setMenuOpen(false)}>
             Our Locations
           </Link>
