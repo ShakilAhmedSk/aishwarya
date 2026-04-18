@@ -1,7 +1,10 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import "./CommunityHero.css";
+import LeadPopup from "../LeadForm/LeadPopup";
 
 const CommunityHero = () => {
+  const [open,setOpen]=useState(false)
   return (
     <section className="ch-sec">
 
@@ -28,9 +31,11 @@ const CommunityHero = () => {
           communities across Bangalore.
         </p>
 
-        <button className="ch-btn">Explore Communities</button>
+        <button className="ch-btn" onClick={()=>setOpen(true)}>Explore Communities</button>
       </div>
-
+      {open && (
+        <LeadPopup/>
+      )}
     </section>
   );
 };

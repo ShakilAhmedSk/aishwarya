@@ -11,22 +11,21 @@ type Testimonial = {
 
 const data: Testimonial[] = [
   {
-    text: "Moving to Bangalore for work was not easy, but this Luxury Living gave me a homely environment and amazing community.",
+    text: "Moving to Bangalore for work was not easy, but this Luxury Living gave me a homely environment and a welcoming community. The rooms are well maintained, the common areas are clean, and the management is always supportive. It truly feels like a comfortable and reliable place to stay.",
     name: "Kritika",
     image: "/Kritika.jpeg",
   },
   {
-    text: "Clean rooms, great food, and very friendly people. Highly recommended!",
+    text: "This has been one of the most comfortable living experiences for me. The cleanliness is consistent, the food is good, and everything is managed smoothly. The friendly environment and sense of safety make it a great place for anyone looking for a peaceful stay.",
     name: "Amit Verma",
     image: "/rm2.avif",
   },
   {
-    text: "Best decision to stay here. Safe, comfortable, and well maintained.",
+    text: "Choosing to stay here was a great decision. The property is well maintained, the atmosphere is calm, and the amenities make daily life easy. It’s not just about staying, it feels like a place where you can truly relax and feel at home.",
     name: "Chaitali",
     image: "/chaitali.jpeg",
   },
 ];
-
 export default function Testimonials() {
   const [index, setIndex] = useState<number>(0);
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -72,11 +71,23 @@ export default function Testimonials() {
           >
             {data.map((item, i) => (
               <div className="testimonial-card" key={i}>
+                
+                {/* TEXT SECTION */}
                 <div className="text">
-                  <p>"{item.text}"</p>
-                  <h4>{item.name}</h4>
+                  <div className="text-top">
+                    <p>"{item.text}"</p>
+                  </div>
+
+                  <div className="text-bottom">
+                    <h4>{item.name}</h4>
+
+                    <div className="rating">
+                      ⭐⭐⭐⭐☆ <span>4.5</span>
+                    </div>
+                  </div>
                 </div>
 
+                {/* IMAGE SECTION */}
                 <div className="image">
                   <Image
                     src={item.image}
@@ -85,6 +96,7 @@ export default function Testimonials() {
                     className="img"
                   />
                 </div>
+
               </div>
             ))}
           </div>

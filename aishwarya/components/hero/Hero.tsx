@@ -1,6 +1,12 @@
 "use client";
 
+import { useState } from "react";
+import LeadPopup from "../LeadForm/LeadPopup";
+import { useRouter } from "next/navigation";
+
 export default function Hero() {
+  const [open,setOpen]=useState(false)
+   const router = useRouter();
   return (
     <section className="relative h-screen w-full overflow-hidden pt-24">
       
@@ -32,11 +38,15 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4 justify-center md:justify-start">
-            <button className="bg-[#c8020e] hover:bg-[#b5232d] px-6 py-3 rounded-xl">
+            <button  onClick={()=>setOpen(true)}
+            className="bg-[#c8020e] hover:bg-[#b5232d] px-6 py-3 rounded-xl">
               Book Now
             </button>
-
-            <button className="border border-white px-6 py-3 rounded-xl">
+            {open && (
+              <LeadPopup/>
+            )}
+            <button   onClick={() => router.push("/find-your-place")}
+            className="border border-white px-6 py-3 rounded-xl">
               Explore
             </button>
           </div>

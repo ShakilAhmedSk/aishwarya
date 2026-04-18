@@ -46,6 +46,7 @@
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  height: 320px;
 }
 
 /* TEXT */
@@ -91,7 +92,14 @@
 .arrow:hover {
   transform: scale(1.2);
 }
-
+.rating {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000; /* black text */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 /* 🔽 Large Screens */
 @media (min-width: 1200px) {
   .slider {

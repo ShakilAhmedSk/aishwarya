@@ -98,8 +98,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
 
             <p className="text-sm text-[#f1e7e7] mb-2">
-              19, Ramaiah Garden Sadduguntepalya Rd, near Dominos Pizza,
-              Bengaluru, Karnataka 560030
+                No. 76, 2nd Cross Rd, Adugodi, <br />Bengaluru – 560030{" "}
             </p>
 
             <p className="text-sm text-[#f1e7e7] mb-2">

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import './Stay.css'
 import Image from "next/image";
@@ -5,9 +6,11 @@ import AishwaryaSteps from './AishwaryaSteps';
 import Testimonials from '../testimonials/Testimonials';
 import ContactSection from '../contact/Contact';
 import AishwaryaContact from '../community/AishwaryaContact';
+import { useRouter } from "next/navigation";
 
 
 const Stay = () => {
+  const router=useRouter()
   return (
     <>
      <div className="stay-hero-unique">
@@ -55,7 +58,7 @@ const Stay = () => {
               className="aish-img-unique"
             />
             <div className="aish-card-title-unique">
-              Aishwarya Boutique Homes
+              Aishwarya Boys Hostels
             </div>
           </div>
 
@@ -75,12 +78,12 @@ const Stay = () => {
               className="aish-img-unique"
             />
             <div className="aish-card-title-unique">
-              Aishwarya Living Hubs
+              Aishwarya Girls Hostels
             </div>
           </div>
 
           <p>
-            Modern co-living hubs with WiFi, co-working spaces, and community
+            Modern living hubs with WiFi, working spaces, and community
             zones designed for professionals and students in Bengaluru.
           </p>
         </div>
@@ -106,11 +109,12 @@ const Stay = () => {
         </h2>
 
         <p>
-          Experience premium co-living in Bengaluru with modern spaces,
+          Experience premium living in Bengaluru with modern spaces,
           vibrant communities, and unmatched comfort tailored for you.
         </p>
 
-        <button className="aish-cta-btn-unique">
+        <button  onClick={() => router.push("/find-your-place")}
+        className="aish-cta-btn-unique">
           Explore Residences
         </button>
       </div>

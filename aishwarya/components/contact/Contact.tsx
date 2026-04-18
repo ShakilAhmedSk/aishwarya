@@ -98,7 +98,7 @@ export default function ContactSection() {
                 name="name"
                 required
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none text-[#000]"
               />
             </div>
 
@@ -112,7 +112,7 @@ export default function ContactSection() {
                 name="phone"
                 required
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none text-[#000]"
               />
             </div>
 
@@ -125,7 +125,7 @@ export default function ContactSection() {
                 type="email"
                 name="email"
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none text-[#000]"
               />
             </div>
 

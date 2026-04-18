@@ -14,7 +14,7 @@ export default function AishwaryaSteps() {
     {
       id: "03",
       title: "Confirm Booking",
-      desc: "Reserve your space بسهولة with a simple and transparent booking process.",
+      desc: "Reserve your space with a simple and transparent booking process.",
     },
     {
       id: "04",

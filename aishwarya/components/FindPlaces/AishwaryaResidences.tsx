@@ -47,6 +47,19 @@ export default function AishwaryaResidences() {
 
     <div className="ar-dropdown">
       <i className="fas fa-map-marker-alt"></i>
+
+      <select className="ar-native-select">
+  <option value="">Hostel Type</option>
+  <option value="boys">Boys Hostel</option>
+  <option value="girls">Girls Hostel</option>
+  
+</select>
+      
+    </div>
+
+    <div className="ar-dropdown">
+      <i className="fas fa-map-marker-alt"></i>
+
       <select className="ar-native-select">
   <option value="">Select city</option>
   <option value="bangalore">Bangalore</option>
@@ -60,7 +73,8 @@ export default function AishwaryaResidences() {
       
       <select className="ar-native-select">
   <option value="">Type of Apartment</option>
-  <option value="1 RK ">1 RK </option>
+  <option value="Suites">Suites </option>
+  <option value="1 RK">1 RK </option>
   <option value=" 1BHK"> 1BHK</option>
 </select>
       
@@ -70,11 +84,11 @@ export default function AishwaryaResidences() {
       <i className="fas fa-user"></i>
       
       <select className="ar-native-select">
-  <option value="">Guests</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
+  <option value="">Occupancy</option>
+  <option value="Single">Single</option>
+  <option value="Double">Double</option>
+  <option value="Triple">Triple</option>
+ 
 </select>
      
     </div>
