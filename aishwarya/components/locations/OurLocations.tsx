@@ -2,6 +2,7 @@
 import { useState } from "react";
 import AishwaryaContact from "../community/AishwaryaContact";
 import "./OurLocations.css";
+import LeadPopup from "../LeadForm/LeadPopup";
 
 const locations = [
   {
@@ -43,6 +44,7 @@ const locations = [
 
 export default function OurLocations() {
   const [selected, setSelected] = useState<any>(null);
+  const [open,setOpen]=useState(false)
 
   return (
     <div className="loc-container">
@@ -93,8 +95,12 @@ export default function OurLocations() {
 
               <p className="modal-desc">{selected.desc}</p>
 
-              <button className="modal-btn">Book Now</button>
+              <button onClick={()=>setOpen(true)}
+              className="modal-btn">Book Now</button>
             </div>
+            {open && (
+              <LeadPopup onClose={()=>setOpen(false)}/>
+            )}
           </div>
         </div>
       )}

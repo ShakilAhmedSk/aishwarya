@@ -10,7 +10,7 @@ export default function About() {
         {/* 🔥 LEFT IMAGE */}
         <div className="relative w-full h-[300px] md:h-[420px] rounded-2xl overflow-hidden">
           <Image
-            src="/about.webp"
+            src="/aish.jpeg"
             alt="Aishwarya Residences Living"
             fill
             priority

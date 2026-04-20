@@ -124,7 +124,7 @@ export default function Navbar() {
             {/* CONTACT BUTTON */}
             <button
               onClick={() => handleNavScroll("contact")}
-              className={`px-3 md:px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition ${
+              className={`cursor-pointer px-3 md:px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition ${
                 scrolled ? "bg-[#c8020e] text-white" : "bg-[#b9242e] text-white"
               }`}
             >

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import './LeadPopup.css'
 
-export default function LeadPopup() {
+export default function LeadPopup({onClose}) {
   const [showPopup, setShowPopup] = useState(false);
 
   // ⏱ Auto open after 5 sec
@@ -29,7 +29,10 @@ export default function LeadPopup() {
         {/* Close */}
         <button
           className="pgx-close"
-          onClick={() => setShowPopup(false)}
+          onClick={() =>{
+            setShowPopup(false),
+            onClose()
+          } }
         >
           ×
         </button>

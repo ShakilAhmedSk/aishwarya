@@ -18,7 +18,7 @@ export default function Hero() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source src="/videos/pg.mp4" type="video/mp4" />
+        <source src="/videos/m1.mp4" type="video/mp4" />
       </video>
 
       {/* 🌑 Overlay */}
@@ -39,14 +39,14 @@ export default function Hero() {
 
           <div className="flex gap-4 justify-center md:justify-start">
             <button  onClick={()=>setOpen(true)}
-            className="bg-[#c8020e] hover:bg-[#b5232d] px-6 py-3 rounded-xl">
+            className="bg-[#c8020e] hover:bg-[#b5232d] px-6 py-3 rounded-xl cursor-pointer">
               Book Now
             </button>
             {open && (
-              <LeadPopup/>
+              <LeadPopup onClose={()=>setOpen(false)}/>
             )}
             <button   onClick={() => router.push("/find-your-place")}
-            className="border border-white px-6 py-3 rounded-xl">
+            className="border border-white px-6 py-3 rounded-xl cursor-pointer">
               Explore
             </button>
           </div>

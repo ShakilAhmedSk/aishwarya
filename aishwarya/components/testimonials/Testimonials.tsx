@@ -12,7 +12,7 @@ type Testimonial = {
 const data: Testimonial[] = [
   {
     text: "Moving to Bangalore for work was not easy, but this Luxury Living gave me a homely environment and a welcoming community. The rooms are well maintained, the common areas are clean, and the management is always supportive. It truly feels like a comfortable and reliable place to stay.",
-    name: "Kritika",
+    name: "Kritika (Solaris)",
     image: "/Kritika.jpeg",
   },
   {
@@ -22,8 +22,13 @@ const data: Testimonial[] = [
   },
   {
     text: "Choosing to stay here was a great decision. The property is well maintained, the atmosphere is calm, and the amenities make daily life easy. It’s not just about staying, it feels like a place where you can truly relax and feel at home.",
-    name: "Chaitali",
+    name: "Chaitali (Solaris)",
     image: "/chaitali.jpeg",
+  },
+    {
+    text: "I’ve stayed at several places before, but this one stands out for its comfort and well-organized management. The facilities are thoughtfully designed, and the environment feels safe and welcoming. It’s a place where you can focus on your work while enjoying a stress-free stay.",
+    name: "Bidusha (Tenant)",
+    image: "/bidhu.jpeg",
   },
 ];
 export default function Testimonials() {
