@@ -1,17 +1,31 @@
 "use client";
 import { useEffect, useState } from "react";
 import './LeadPopup.css'
-
-export default function LeadPopup({onClose}) {
+type LeadPopupProps = {
+  onClose?: () => void;
+  open?: boolean;
+};
+export default function LeadPopup({onClose,open}: LeadPopupProps) {
   const [showPopup, setShowPopup] = useState(false);
 
+  useEffect(()=>{
+    if(open){
+      setShowPopup(true)
+    }
+  },[open])
   // ⏱ Auto open after 5 sec
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const seen=localStorage.getItem("popupShown")
+    if(!seen){
+       const timer = setTimeout(() => {
       setShowPopup(true);
+      localStorage.setItem("popupShown","true")
     }, 5000);
-
     return () => clearTimeout(timer);
+    }
+    
+
+    
   }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

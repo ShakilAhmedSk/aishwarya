@@ -99,7 +99,7 @@ export default function OurLocations() {
               className="modal-btn">Book Now</button>
             </div>
             {open && (
-              <LeadPopup onClose={()=>setOpen(false)}/>
+              <LeadPopup onClose={()=>setOpen(false)} open={open}/>
             )}
           </div>
         </div>

@@ -43,7 +43,7 @@ export default function Hero() {
               Book Now
             </button>
             {open && (
-              <LeadPopup onClose={()=>setOpen(false)}/>
+              <LeadPopup onClose={()=>setOpen(false)} open={open}/>
             )}
             <button   onClick={() => router.push("/find-your-place")}
             className="border border-white px-6 py-3 rounded-xl cursor-pointer">

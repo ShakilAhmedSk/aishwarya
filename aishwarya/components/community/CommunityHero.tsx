@@ -34,8 +34,8 @@ const CommunityHero = () => {
         <button className="ch-btn" onClick={()=>setOpen(true)}>Explore Communities</button>
       </div>
       {open && (
-        <LeadPopup onClose={()=>setOpen(false)}/>
-      )}
+        <LeadPopup onClose={()=>setOpen(false)} open={open}/>
+      )} 
     </section>
   );
 };

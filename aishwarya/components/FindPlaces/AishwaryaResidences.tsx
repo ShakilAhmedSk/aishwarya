@@ -68,7 +68,8 @@ const filteredListings = listings
     if (filters.sort === "1") return a.price - b.price;
     if (filters.sort === "2") return b.price - a.price;
     return 0;
-  });
+  })
+  .slice(0, 4); // 👈 THIS LINE IS THE KEY
   return (
     <section className="ar-section">
       
@@ -187,13 +188,14 @@ const filteredListings = listings
                 <button onClick={()=>setOpen(true)}
                 className="ar-btn">Book</button>
               </div>
-              {open && (
-                <LeadPopup onClose={()=>setOpen(false)}/>
-              )}
+             
             </div>
           </div>
         ))}
       </div>
+       {open && (
+                <LeadPopup onClose={()=>setOpen(false)} open={open}/>
+              )}
     </section>
   );
 }
