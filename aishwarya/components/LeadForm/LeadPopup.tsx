@@ -30,8 +30,8 @@ export default function LeadPopup({onClose}) {
         <button
           className="pgx-close"
           onClick={() =>{
-            setShowPopup(false),
-            onClose()
+            setShowPopup(false);
+            onClose?.();
           } }
         >
           ×

@@ -125,8 +125,31 @@ const faqs: FAQ[] = [
     answer:
       "You can contact us directly via phone or visit our location to check availability and book your room.",
   },
-
+   {
+    question: "Do you have multiple branches?",
+    answer:
+      "Yes, we have multiple branches around Christ College, both on the front gate side and back gate side for easy accessibility."
+  },
+  {
+    question: "What facilities are included?",
+    answer:
+      "Our facilities include fully furnished rooms, regular housekeeping, hygienic food, high-speed Wi-Fi, 24/7 security, and more."
+  },
+ 
+ {
+    question: "Do you provide security and safety?",
+    answer:
+      "Yes, we ensure 24/7 security with a safe and comfortable environment for all residents."
+  },
   // 👇 dummy extra FAQs (you can replace later)
+   {
+    question: "Are visitors allowed?",
+    answer: "Visitor policies are in place for safety. Please contact management for specific guidelines.",
+  },
+  {
+    question: " What room types are available?",
+    answer: "We offer single, double, and triple sharing occupancy rooms based on your preference and availability.",
+  },
   {
     question: "Is WiFi available?",
     answer: "Yes, high-speed WiFi is available for all residents.",
@@ -135,14 +158,8 @@ const faqs: FAQ[] = [
     question: "Is laundry service included?",
     answer: "Yes, laundry service is available on request.",
   },
-  {
-    question: "Do you allow guests?",
-    answer: "Guests are allowed during visiting hours with permission.",
-  },
-  {
-    question: "Is parking available?",
-    answer: "Limited parking space is available for residents.",
-  },
+ 
+  
   {
     question: "Is security provided?",
     answer: "Yes, 24/7 security and CCTV surveillance is available.",
