@@ -173,7 +173,7 @@ const filteredListings = listings
             </div>
 
             <div className="ar-content">
-              <p className="ar-location">{item.location}</p>
+              <p className="ar-location">{item.city}</p>
 
               <h3 className="ar-title">{item.title}</h3>
 
