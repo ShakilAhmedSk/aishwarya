@@ -1,0 +1,80 @@
+/* SECTION */
+.policy-section {
+  background: #f1e7e7;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* HEADING */
+.policy-heading {
+  font-size: 40px;
+  font-weight: 700;
+  color: #c8020e;
+  margin-bottom: 10px;
+}
+
+.policy-subtitle {
+  color: #666;
+  margin-bottom: 50px;
+}
+
+/* CONTAINER */
+.policy-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* CARD */
+.policy-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+.policy-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* TITLE */
+.policy-card h3 {
+  color: #c8020e;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.policy-card p,
+.policy-card li {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* LIST */
+.policy-card ul {
+  padding-left: 20px;
+}
+
+/* FOOTER */
+.policy-footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .policy-heading {
+    font-size: 28px;
+  }
+
+  .policy-card {
+    padding: 20px;
+  }
+}

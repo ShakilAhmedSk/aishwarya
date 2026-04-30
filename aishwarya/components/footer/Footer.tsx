@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import useScrollNav from "@/Utils/useScrollNav"; // 👈 HERE
+import useScrollNav from "@/Utils/useScrollNav";
 
 export default function Footer() {
   const { handleNavScroll } = useScrollNav();
@@ -10,8 +10,10 @@ export default function Footer() {
   return (
     <footer className="bg-[#c8020e] text-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
+        
         {/* TOP */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
           {/* BRAND */}
           <div>
             <Link href="/" className="inline-block mb-4">
@@ -80,15 +82,24 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
 
             <ul className="space-y-2 text-sm text-[#f1e7e7]">
-              <li className="cursor-pointer">Blog</li>
-
-              <li className="cursor-pointer">Facilities</li>
-
               <li
                 className="cursor-pointer"
                 onClick={() => handleNavScroll("faq")}
               >
                 FAQ
+              </li>
+
+              {/* ✅ NEW */}
+              <li>
+                <Link href="/privacy-policy" className="hover:text-[#f0d5e3]">
+                  Privacy Policy
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/terms" className="hover:text-[#f0d5e3]">
+                  Terms & Conditions
+                </Link>
               </li>
             </ul>
           </div>
@@ -98,7 +109,8 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
 
             <p className="text-sm text-[#f1e7e7] mb-2">
-                No. 76, 2nd Cross Rd, Adugodi, <br />Bengaluru – 560030{" "}
+              No. 76, 2nd Cross Rd, Adugodi, <br />
+              Bengaluru – 560030
             </p>
 
             <p className="text-sm text-[#f1e7e7] mb-2">
@@ -111,15 +123,27 @@ export default function Footer() {
 
             {/* SOCIAL */}
             <div className="flex gap-4">
-              <a className="bg-white text-[#c8020e] p-2 rounded-full hover:bg-[#f0d5e3] transition">
+              <a
+                href="#"
+                target="_blank"
+                className="bg-white text-[#c8020e] p-2 rounded-full hover:bg-[#f0d5e3] transition"
+              >
                 <i className="fab fa-facebook-f text-sm"></i>
               </a>
 
-              <a className="bg-white text-[#c8020e] p-2 rounded-full hover:bg-[#f0d5e3] transition">
+              <a
+                href="#"
+                target="_blank"
+                className="bg-white text-[#c8020e] p-2 rounded-full hover:bg-[#f0d5e3] transition"
+              >
                 <i className="fab fa-instagram text-sm"></i>
               </a>
 
-              <a className="bg-white text-[#c8020e] p-2 rounded-full hover:bg-[#f0d5e3] transition">
+              <a
+                href="#"
+                target="_blank"
+                className="bg-white text-[#c8020e] p-2 rounded-full hover:bg-[#f0d5e3] transition"
+              >
                 <i className="fab fa-twitter text-sm"></i>
               </a>
             </div>
@@ -128,15 +152,13 @@ export default function Footer() {
 
         {/* BOTTOM */}
         <div className="border-t border-[#f0d5e3] mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-[#f1e7e7]">
-          {/* LEFT */}
+
           <p>
-            © {new Date().getFullYear()} Aishwarya Residences. All rights
-            reserved.
+            © {new Date().getFullYear()} Aishwarya Residences. All rights reserved.
           </p>
 
-          {/* RIGHT (ZUNOFIDE BRANDING) */}
           <div className="mt-2 md:mt-0 flex items-center gap-2">
-            <span>Designed by</span>
+            <span>Designed & Developed by</span>
 
             <a
               href="https://www.zunofide.com/"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
 import "slick-carousel/slick/slick.css";
@@ -68,6 +69,10 @@ export default function RootLayout({
 
         {/* 🔻 Footer */}
         <Footer />
+
+
+        {/* 💬 WhatsApp Button (GLOBAL) */}
+        <WhatsAppButton />
 
       </body>
     </html>
