@@ -10,10 +10,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#c8020e] text-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        
         {/* TOP */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-
           {/* BRAND */}
           <div>
             <Link href="/" className="inline-block mb-4">
@@ -109,12 +107,15 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
 
             <p className="text-sm text-[#f1e7e7] mb-2">
-              No. 76, 2nd Cross Rd, Adugodi, <br />
-              Bengaluru – 560030
+              79/76, 2nd Main Road, 2nd Cross Chikkalakshmi Layout,
+              <br />
+              D.R.C Post,
+              <br />
+              Bangalore – 560029
             </p>
 
             <p className="text-sm text-[#f1e7e7] mb-2">
-              9845389055 / 720466204
+              9845389055 / 7204662204
             </p>
 
             <p className="text-sm text-[#f1e7e7] mb-4">
@@ -124,7 +125,7 @@ export default function Footer() {
             {/* SOCIAL */}
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61582134176488"
                 target="_blank"
                 className="bg-white text-[#c8020e] p-2 rounded-full hover:bg-[#f0d5e3] transition"
               >
@@ -132,7 +133,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/aishwarya_blr/?hl=en"
                 target="_blank"
                 className="bg-white text-[#c8020e] p-2 rounded-full hover:bg-[#f0d5e3] transition"
               >
@@ -140,11 +141,12 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.quora.com/profile/Aishwaryapg-Marketing"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-[#c8020e] p-2 rounded-full hover:bg-[#f0d5e3] transition"
               >
-                <i className="fab fa-twitter text-sm"></i>
+                <i className="fab fa-quora text-sm"></i>
               </a>
             </div>
           </div>
@@ -152,9 +154,9 @@ export default function Footer() {
 
         {/* BOTTOM */}
         <div className="border-t border-[#f0d5e3] mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-[#f1e7e7]">
-
           <p>
-            © {new Date().getFullYear()} Aishwarya Residences. All rights reserved.
+            © {new Date().getFullYear()} Aishwarya Residences. All rights
+            reserved.
           </p>
 
           <div className="mt-2 md:mt-0 flex items-center gap-2">
