@@ -68,7 +68,7 @@ export default function ContactSection() {
               <i className="fas fa-phone text-[#c8020e]"></i>
               <span className="text-sm text-gray-700">
                 {" "}
-                9845389055 / 720466204
+                9845389055 / 7204662204
               </span>
             </div>
 

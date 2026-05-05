@@ -1,24 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 
 const WHATSAPP_PHONE = "919845389055";
 
 export default function WhatsAppButton() {
-  const [message, setMessage] = useState("");
+  // ✅ Directly compute (client-side safe)
+  const path =
+    typeof window !== "undefined"
+      ? window.location.pathname.replaceAll("-", " ").replace("/", "")
+      : "";
 
-  // ✅ Run ONLY on client
-  useEffect(() => {
-    const path = window.location.pathname
-      .replaceAll("-", " ")
-      .replace("/", "");
-
-    setMessage(`Hi, I'm interested in ${path}`);
-  }, []);
-
-  // ❗ Avoid rendering until message is ready
-  if (!message) return null;
+  const message = `Hi, I'm interested ${path}`;
 
   const whatsappURL = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
     message
@@ -43,7 +36,6 @@ export default function WhatsAppButton() {
         w-14 h-14 rounded-full shadow-xl transition-all duration-300"
       >
         <Icon icon="ic:baseline-whatsapp" width={26} height={26} />
-
       </div>
     </a>
   );
