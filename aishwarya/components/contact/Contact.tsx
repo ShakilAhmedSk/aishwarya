@@ -60,7 +60,8 @@ export default function ContactSection() {
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-map-marker-alt text-[#c8020e]"></i>
               <span className="text-sm text-gray-700">
-                No. 76, 2nd Cross Rd, Adugodi, Bengaluru – 560030{" "}
+                79/76, 2nd Main Road, 2nd Cross Chikkalakshmi Layout, D.R.C
+                Post, Bangalore – 560029
               </span>
             </div>
 

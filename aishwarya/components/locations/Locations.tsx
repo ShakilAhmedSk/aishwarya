@@ -27,13 +27,13 @@ export default function Locations() {
           <h3>Aishwarya Residences</h3>
 
           <p>
-            No. 76, 2nd Cross Rd,
+            79/76, 2nd Main Road,
             <br />
-            Dairy Colony,
+            2nd Cross Chikkalakshmi Layout,
             <br />
-            Adugodi,
+            D.R.C Post,
             <br />
-            Bengaluru, Karnataka 560030
+            Bangalore - 560029
           </p>
 
           <p className="contact">
