@@ -37,7 +37,7 @@ export default function Locations() {
           </p>
 
           <p className="contact">
-            📞 9845389055 / 720466204 <br />
+            📞 9845389055 / 7204662204 <br />
             ✉️ aishwaryapgblr@gmail.com
           </p>
 
