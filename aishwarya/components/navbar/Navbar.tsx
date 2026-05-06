@@ -149,9 +149,9 @@ export default function Navbar() {
             Our Locations
           </Link>
 
-          <Link href="/community" onClick={() => setMenuOpen(false)}>
+          {/*<Link href="/community" onClick={() => setMenuOpen(false)}>
             Community
-          </Link>
+          </Link>*/}
 
           <Link href="/stay-with-us" onClick={() => setMenuOpen(false)}>
             Stay With Us
