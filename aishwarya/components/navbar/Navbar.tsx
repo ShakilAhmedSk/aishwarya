@@ -78,14 +78,14 @@ export default function Navbar() {
                 Our Locations
               </Link>
 
-              <Link
+              {/*<Link
                 href="/community"
                 className={`${base} ${
                   pathname === "/community" ? active : inactive
                 }`}
               >
                 Community
-              </Link>
+              </Link>*/}
 
               <Link
                 href="/stay-with-us"
