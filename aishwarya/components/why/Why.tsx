@@ -15,25 +15,25 @@ export default function Why() {
   const slides = [
     {
       id: 1,
-      img: "/about1.jpg",
+      img: "/why2.jpeg",
       title: "Food & Drinks",
       desc: "Enjoy healthy and delicious meals everyday.",
     },
     {
       id: 2,
-      img: "/about2.jpg",
+      img: "/why3.png",
       title: "Community Life",
       desc: "Meet amazing people and build connections.",
     },
     {
       id: 3,
-      img: "/about3.jpg",
+      img: "/why4.png",
       title: "Premium Rooms",
       desc: "Fully furnished rooms designed for comfort.",
     },
     {
       id: 4,
-      img: "/about4.jpg",
+      img: "/why1.png",
       title: "Events & Fun",
       desc: "Regular events, games and social activities.",
     },

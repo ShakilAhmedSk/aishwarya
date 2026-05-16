@@ -4,27 +4,25 @@ import "./Curators.css";
 const Curators = () => {
   return (
     <section className="cr-sec">
-      
       {/* HEADER */}
       <div className="cr-head">
         <h2>Your Community Curators</h2>
         <p>
-          Our Bangalore community curators bring residents together through
-          events, local experiences, and shared moments. They help you connect,
-          explore the city, and feel at home from day one.
+          At Aishwarya Residences, our community curators help residents
+          connect, settle in comfortably, and enjoy a welcoming living
+          experience through engaging activities and shared moments.
         </p>
       </div>
 
       {/* CARDS */}
       <div className="cr-grid">
-
         {/* CARD 1 */}
         <div className="cr-card">
           <div className="cr-img">
-            <img src="cr2.jpeg" />
+            <img src="RimaSoni.jpeg" />
             <div className="cr-overlay">
-              <h3>Riya Sharma</h3>
-              <span>Community Curator • Aishwarya Aurus</span>
+              <h3>Rima Sony</h3>
+              <span>Community Curator</span>
             </div>
           </div>
 
@@ -40,10 +38,10 @@ const Curators = () => {
         {/* CARD 2 */}
         <div className="cr-card">
           <div className="cr-img">
-            <img src="/cr.jpeg" />
+            <img src="/KajalPaul.jpeg" />
             <div className="cr-overlay">
-              <h3>Ananya Rao</h3>
-              <span>Community Curator • Aishwarya Solaris</span>
+              <h3>Kajal Paul</h3>
+              <span>Community Curator</span>
             </div>
           </div>
 
@@ -55,7 +53,6 @@ const Curators = () => {
             </p>
           </div>
         </div>
-
       </div>
     </section>
   );

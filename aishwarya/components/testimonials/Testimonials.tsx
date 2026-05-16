@@ -17,8 +17,8 @@ const data: Testimonial[] = [
   },
   {
     text: "This has been one of the most comfortable living experiences for me. The cleanliness is consistent, the food is good, and everything is managed smoothly. The friendly environment and sense of safety make it a great place for anyone looking for a peaceful stay.",
-    name: "Amit Verma",
-    image: "/rm2.avif",
+    name: "Kavir ",
+    image: "/kavir.jpeg",
   },
   {
     text: "Choosing to stay here was a great decision. The property is well maintained, the atmosphere is calm, and the amenities make daily life easy. It’s not just about staying, it feels like a place where you can truly relax and feel at home.",
