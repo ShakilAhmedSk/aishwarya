@@ -1,37 +1,109 @@
 "use client";
+
 import { useEffect, useState } from "react";
-import './LeadPopup.css'
+import { toast } from "sonner";
+import "./LeadPopup.css";
+
 type LeadPopupProps = {
   onClose?: () => void;
   open?: boolean;
 };
-export default function LeadPopup({onClose,open}: LeadPopupProps) {
-  const [showPopup, setShowPopup] = useState(false);
 
-  useEffect(()=>{
-    if(open){
-      setShowPopup(true)
-    }
-  },[open])
-  // ⏱ Auto open after 5 sec
+type FormType = {
+  name: string;
+  phone: string;
+  email: string;
+  roomType: string;
+};
+
+export default function LeadPopup({
+  onClose,
+  open = false,
+}: LeadPopupProps) {
+  const [autoOpen, setAutoOpen] = useState(false);
+
+  const [loading, setLoading] = useState(false);
+
+  const [form, setForm] = useState<FormType>({
+    name: "",
+    phone: "",
+    email: "",
+    roomType: "",
+  });
+
+  // Auto popup after 5 sec
   useEffect(() => {
-    const seen=localStorage.getItem("popupShown")
-    if(!seen){
-       const timer = setTimeout(() => {
-      setShowPopup(true);
-      localStorage.setItem("popupShown","true")
-    }, 5000);
-    return () => clearTimeout(timer);
-    }
-    
+    const seen = localStorage.getItem("popupShown");
 
-    
+    if (!seen) {
+      const timer = setTimeout(() => {
+        setAutoOpen(true);
+
+        localStorage.setItem("popupShown", "true");
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const showPopup = open || autoOpen;
+
+  const handleClose = () => {
+    setAutoOpen(false);
+
+    onClose?.();
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement
+    >
+  ) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
-    alert("Lead Submitted ✅");
-    setShowPopup(false);
+
+    setLoading(true);
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxE_BxMk-QVgMGP8HEbH7raHt8oFZ6DMaxw_sTxkMGp35th2WgAvG6_XQpmvsUiIqHy/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        }
+      );
+
+      toast.success(
+        "Lead submitted successfully!"
+      );
+
+      setForm({
+        name: "",
+        phone: "",
+        email: "",
+        roomType: "",
+      });
+
+      handleClose();
+    } catch (error) {
+      console.error(error);
+
+      toast.error("Submission failed!");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (!showPopup) return null;
@@ -39,22 +111,24 @@ export default function LeadPopup({onClose,open}: LeadPopupProps) {
   return (
     <div className="pgx-overlay">
       <div className="pgx-popup">
-
         {/* Close */}
         <button
           className="pgx-close"
-          onClick={() =>{
-            setShowPopup(false);
-            onClose?.();
-          } }
+          onClick={handleClose}
         >
           ×
         </button>
 
         {/* Left Content */}
         <div className="pgx-left">
-          <h2>Find Your Perfect Luxury Living</h2>
-          <p>Safe, Affordable & Comfortable Living</p>
+          <h2>
+            Find Your Perfect Luxury Living
+          </h2>
+
+          <p>
+            Safe, Affordable & Comfortable
+            Living
+          </p>
 
           <ul>
             <li>✔ Furnished Rooms</li>
@@ -67,41 +141,75 @@ export default function LeadPopup({onClose,open}: LeadPopupProps) {
         <div className="pgx-right">
           <h3>Get Details</h3>
 
-          <form onSubmit={handleSubmit} className="pgx-form">
+          <form
+            onSubmit={handleSubmit}
+            className="pgx-form"
+          >
             <input
               type="text"
+              name="name"
               placeholder="Full Name"
               required
+              value={form.name}
+              onChange={handleChange}
               className="pgx-input"
             />
 
             <input
               type="tel"
+              name="phone"
               placeholder="Phone Number"
               required
+              value={form.phone}
+              onChange={handleChange}
               className="pgx-input"
             />
 
             <input
               type="email"
+              name="email"
               placeholder="Email Address"
               required
+              value={form.email}
+              onChange={handleChange}
               className="pgx-input"
             />
 
-            <select required className="pgx-input">
-              <option value="">Select Room Type</option>
-              <option>Single Room</option>
-              <option>Double Sharing</option>
-              <option>Triple Sharing</option>
+            <select
+              required
+              name="roomType"
+              value={form.roomType}
+              onChange={handleChange}
+              className="pgx-input"
+            >
+              <option value="">
+                Select Room Type
+              </option>
+
+              <option value="Single Room">
+                Single Room
+              </option>
+
+              <option value="Double Sharing">
+                Double Sharing
+              </option>
+
+              <option value="Triple Sharing">
+                Triple Sharing
+              </option>
             </select>
 
-            <button type="submit" className="pgx-btn">
-              Check Availability
+            <button
+              type="submit"
+              disabled={loading}
+              className="pgx-btn"
+            >
+              {loading
+                ? "Submitting..."
+                : "Check Availability"}
             </button>
           </form>
         </div>
-
       </div>
     </div>
   );
