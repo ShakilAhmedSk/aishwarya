@@ -11,7 +11,7 @@ export default function About() {
           {/* Boys Hostel */}
           <div className="relative rounded-2xl overflow-hidden group">
             <Image
-              src="/boys-hostel.jpg"
+              src="/boyeshostel.jpeg"
               alt="Boys Hostel"
               fill
               priority
@@ -35,7 +35,7 @@ export default function About() {
           {/* Girls Hostel */}
           <div className="relative rounded-2xl overflow-hidden group">
             <Image
-              src="/girls-hostel.jpg"
+              src="/girls-hostel.jpeg"
               alt="Girls Hostel"
               fill
               priority

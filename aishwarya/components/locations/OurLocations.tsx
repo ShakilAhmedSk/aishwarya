@@ -1,15 +1,24 @@
 "use client";
+
 import { useState } from "react";
 import AishwaryaContact from "../community/AishwaryaContact";
 import "./OurLocations.css";
 import LeadPopup from "../LeadForm/LeadPopup";
 
-const locations = [
+interface LocationType {
+  title: string;
+  area: string;
+  subtitle: string;
+  img: string;
+  desc: string;
+}
+
+const locations: LocationType[] = [
   {
     title: "Aishwarya Estrella",
     area: "S.G Palya, Bangalore",
     subtitle: "Near Christ Front Gate",
-    img: "/pgr.jpg",
+    img: "/aurellia/a1.png",
     desc: "Premium co-living space with modern amenities, spacious rooms, and a vibrant community. Ideal for students and working professionals.",
   },
   {
@@ -43,8 +52,8 @@ const locations = [
 ];
 
 export default function OurLocations() {
-  const [selected, setSelected] = useState<any>(null);
-  const [open,setOpen]=useState(false)
+  const [selected, setSelected] = useState<LocationType | null>(null);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="loc-container">
@@ -62,6 +71,7 @@ export default function OurLocations() {
           <div className="loc-content">
             <h3>{loc.title}</h3>
             <p className="loc-area">{loc.area}</p>
+
             {loc.subtitle && <p className="loc-sub">{loc.subtitle}</p>}
 
             <button className="loc-btn" onClick={() => setSelected(loc)}>
@@ -71,13 +81,10 @@ export default function OurLocations() {
         </div>
       ))}
 
-      {/* 🔥 MODAL */}
+      {/* MODAL */}
       {selected && (
         <div className="modal-overlay" onClick={() => setSelected(null)}>
-          <div
-            className="modal"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
             <span className="close" onClick={() => setSelected(null)}>
               ✕
             </span>
@@ -88,18 +95,28 @@ export default function OurLocations() {
 
             <div className="modal-content">
               <h2>{selected.title}</h2>
+
               <p className="modal-area">{selected.area}</p>
+
               {selected.subtitle && (
                 <p className="modal-sub">{selected.subtitle}</p>
               )}
 
               <p className="modal-desc">{selected.desc}</p>
 
-              <button onClick={()=>setOpen(true)}
-              className="modal-btn">Book Now</button>
+              <button
+                onClick={() => setOpen(true)}
+                className="modal-btn"
+              >
+                Book Now
+              </button>
             </div>
+
             {open && (
-              <LeadPopup onClose={()=>setOpen(false)} open={open}/>
+              <LeadPopup
+                onClose={() => setOpen(false)}
+                open={open}
+              />
             )}
           </div>
         </div>
