@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
+import { Toaster } from "sonner";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from "@/components/navbar/Navbar";
@@ -66,7 +67,7 @@ export default function RootLayout({
 
         {/* 📄 Page Content */}
         <main className="flex-1">{children}</main>
-
+        <Toaster richColors position="top-right" />
         {/* 🔻 Footer */}
         <Footer />
 

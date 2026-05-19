@@ -27,9 +27,9 @@ export default function Why() {
     },
     {
       id: 3,
-      img: "/why4.png",
+      img: "/dubbleshearing.png",
       title: "Premium Rooms",
-      desc: "Fully furnished rooms designed for comfort.",
+      desc: "Fully furnished rooms designed for comfort.",  
     },
     {
       id: 4,

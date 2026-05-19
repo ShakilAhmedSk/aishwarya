@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner";
 
 type FormType = {
   name: string;
@@ -21,18 +22,57 @@ export default function ContactSection() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
+    >
   ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    alert("Thanks! We'll contact you shortly.");
-  };
+const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbxE_BxMk-QVgMGP8HEbH7raHt8oFZ6DMaxw_sTxkMGp35th2WgAvG6_XQpmvsUiIqHy/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      }
+    );
+
+    toast.success("Inquiry submitted successfully!");
+
+    setForm({
+      name: "",
+      phone: "",
+      email: "",
+      roomType: "",
+      moveIn: "",
+      message: "",
+    });
+  } catch (error) {
+    console.error(error);
+
+    toast.error("Submission failed!");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <section
@@ -59,22 +99,24 @@ export default function ContactSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-map-marker-alt text-[#c8020e]"></i>
+
               <span className="text-sm text-gray-700">
-                79/76, 2nd Main Road, 2nd Cross Chikkalakshmi Layout, D.R.C
-                Post, Bangalore – 560029
+                79/76, 2nd Main Road, 2nd Cross Chikkalakshmi Layout,
+                D.R.C Post, Bangalore – 560029
               </span>
             </div>
 
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-phone text-[#c8020e]"></i>
+
               <span className="text-sm text-gray-700">
-                {" "}
                 9845389055 / 7204662204
               </span>
             </div>
 
             <div className="flex items-center gap-4 bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm">
               <i className="fas fa-envelope text-[#c8020e]"></i>
+
               <span className="text-sm text-gray-700">
                 aishwaryapgblr@gmail.com
               </span>
@@ -88,16 +130,21 @@ export default function ContactSection() {
             Enquiry Form
           </h3>
 
-          <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-5">
+          <form
+            onSubmit={handleSubmit}
+            className="grid grid-cols-1 gap-5"
+          >
             {/* Name */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Full Name
               </label>
+
               <input
                 type="text"
                 name="name"
                 required
+                value={form.name}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none text-[#000]"
               />
@@ -108,10 +155,12 @@ export default function ContactSection() {
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Phone Number
               </label>
+
               <input
                 type="tel"
                 name="phone"
                 required
+                value={form.phone}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none text-[#000]"
               />
@@ -122,9 +171,11 @@ export default function ContactSection() {
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Email Address
               </label>
+
               <input
                 type="email"
                 name="email"
+                value={form.email}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c8020e] outline-none text-[#000]"
               />
@@ -135,46 +186,66 @@ export default function ContactSection() {
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Room Type
               </label>
+
               <select
                 name="roomType"
+                value={form.roomType}
                 onChange={handleChange}
                 className="w-full border border-gray-300 rounded-lg px-4 py-2.5 
                 bg-white text-gray-800 appearance-none
-                focus:ring-2 focus:ring-[#c8020e] 
+                focus:ring-2 focus:ring-[#c8020e]
                 focus:border-[#c8020e]
                 outline-none transition"
               >
                 <option value="">Select Room</option>
-                <option value="single">Single Sharing</option>
-                <option value="double">Double Sharing</option>
-                <option value="triple">Triple Sharing</option>
+
+                <option value="single">
+                  Single Sharing
+                </option>
+
+                <option value="double">
+                  Double Sharing
+                </option>
+
+                <option value="triple">
+                  Triple Sharing
+                </option>
               </select>
             </div>
 
-            {/* Move-in */}
-            <input
-              type="date"
-              name="moveIn"
-              onChange={handleChange}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2.5 
-              bg-white text-gray-800 
-              focus:ring-2 focus:ring-[#c8020e] 
-              focus:border-[#c8020e]
-              outline-none transition"
-            />
+            {/* Move In */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Move In Date
+              </label>
+
+              <input
+                type="date"
+                name="moveIn"
+                value={form.moveIn}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5
+                bg-white text-gray-800
+                focus:ring-2 focus:ring-[#c8020e]
+                focus:border-[#c8020e]
+                outline-none transition"
+              />
+            </div>
 
             {/* Message */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Additional Message
               </label>
+
               <textarea
                 name="message"
                 rows={3}
+                value={form.message}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5
                 bg-white text-gray-800 placeholder-gray-400
-                focus:ring-2 focus:ring-[#c8020e] 
+                focus:ring-2 focus:ring-[#c8020e]
                 focus:border-[#c8020e]
                 outline-none transition resize-none"
               />
@@ -183,9 +254,10 @@ export default function ContactSection() {
             {/* Button */}
             <button
               type="submit"
-              className="mt-3 bg-[#c8020e] text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition shadow-md"
+              disabled={loading}
+              className="mt-3 bg-[#c8020e] text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition shadow-md disabled:opacity-60"
             >
-              Submit Inquiry
+              {loading ? "Submitting..." : "Submit Inquiry"}
             </button>
           </form>
         </div>
