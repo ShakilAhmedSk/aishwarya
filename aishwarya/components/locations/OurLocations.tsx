@@ -15,11 +15,11 @@ interface LocationType {
 
 const locations: LocationType[] = [
   {
-    title: "Aishwarya Estrella",
+    title: "Aishwarya Aurellia",
     area: "S.G Palya, Bangalore",
     subtitle: "Near Christ Front Gate",
     img: "/aurellia/a1.png",
-    desc: "Premium co-living space with modern amenities, spacious rooms, and a vibrant community. Ideal for students and working professionals.",
+    desc: "Premium  space with modern amenities, spacious rooms, and a vibrant community. Ideal for students and working professionals.",
   },
   {
     title: "Aishwarya Solaris",
