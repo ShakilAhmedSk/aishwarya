@@ -28,9 +28,12 @@ const Curators = () => {
 
           <div className="cr-info">
             <p>
-              Known for her energetic vibe, Riya loves organizing rooftop
-              gatherings and café meetups around Indiranagar. She ensures every
-              resident feels welcomed and connected.
+              Rima is known for her energetic vibe and passion for building a
+              welcoming community at Aishwarya Residences. She loves organizing
+              rooftop gatherings and café meetups that help residents connect
+              and feel at home. Along with creating memorable experiences, she
+              also enjoys capturing pictures and videos while managing social
+              media content and posts for the community.
             </p>
           </div>
         </div>
@@ -47,9 +50,13 @@ const Curators = () => {
 
           <div className="cr-info">
             <p>
-              Ananya is known for creating cozy community events and wellness
-              sessions. From yoga mornings to food walks, she brings people
-              together effortlessly.
+              Kajal is known for creating warm community events and managing
+              residents with care and dedication. She brings people together
+              effortlessly and ensures a comfortable living experience for
+              everyone at Aishwarya Residences. From handling day-to-day
+              operations to taking care of residents during medical emergencies,
+              she plays an important role in keeping the community supportive
+              and well-managed.
             </p>
           </div>
         </div>

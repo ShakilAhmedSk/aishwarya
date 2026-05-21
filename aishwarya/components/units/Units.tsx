@@ -2,11 +2,7 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
-import {
-  FaBuilding,
-  FaChevronLeft,
-  FaChevronRight,
-} from "react-icons/fa";
+import { FaBuilding, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 type TabType =
   | "Aishwarya Aurellia"
@@ -14,6 +10,7 @@ type TabType =
   | "Aishwarya Solaris"
   | "Aishwarya 9"
   | "Aishwarya Sunshine"
+  | "Aishwarya Gardenia"
   | "Upcoming Branches";
 
 type PropertyType = {
@@ -97,28 +94,28 @@ const propertyData: Record<TabType, PropertyType[]> = {
       isNew: true,
       tag: "Studio",
       title: "Single Sharing Room",
-      image: "/solaris/s1.jpg",
+      image: "/solaris/1.jpeg",
     },
     {
       id: 2,
       location: "S.g palya Venkateshwara layout Pg",
       tag: "Private",
       title: "Double Sharing Room",
-      image: "/solaris/s2.jpg",
+      image: "/solaris/2.jpeg",
     },
     {
       id: 3,
       location: "S.g palya Venkateshwara layout Pg",
-      tag: "Private",
-      title: "Triple Sharing Room",
-      image: "/solaris/s3.jpg",
+      tag: "Studio",
+      title: "1RK",
+      image: "/solaris/1rk.jpeg",
     },
     {
       id: 4,
       location: "S.g palya Venkateshwara layout Pg",
-      tag: "Studio",
-      title: "1RK",
-      image: "/solaris/s4.jpg",
+      tag: "Private",
+      title: "Common Area",
+      image: "/solaris/common.jpeg",
     },
   ],
 
@@ -186,12 +183,43 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
   ],
 
+  "Aishwarya Gardenia": [
+    {
+      id: 1,
+      location: "Bhavani Nagar, S.G Palya Pg",
+      isNew: true,
+      tag: "Studio",
+      title: "Single Sharing Room",
+      image: "/gardenia/1.jpeg",
+    },
+    {
+      id: 2,
+      location: "Bhavani Nagar, S.G Palya Pg",
+      tag: "Private",
+      title: "Double Sharing Room",
+      image: "/gardenia/2.jpeg",
+    },
+    {
+      id: 3,
+      location: "Bhavani Nagar, S.G Palya Pg",
+      tag: "Private",
+      title: "Triple Sharing Room",
+      image: "/gardenia/3.jpeg",
+    },
+    {
+      id: 4,
+      location: "Bhavani Nagar, S.G Palya Pg",
+      tag: "Studio",
+      title: "Common Area",
+      image: "/gardenia/common.jpeg",
+    },
+  ],
+
   "Upcoming Branches": [],
 };
 
 export default function Units() {
-  const [activeTab, setActiveTab] =
-    useState<TabType>("Aishwarya Aurellia");
+  const [activeTab, setActiveTab] = useState<TabType>("Aishwarya Aurellia");
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -210,20 +238,18 @@ export default function Units() {
     "Aishwarya Solaris",
     "Aishwarya 9",
     "Aishwarya Sunshine",
+    "Aishwarya Gardenia",
     "Upcoming Branches",
   ];
 
   return (
     <section className="bg-[#f1e7e7] py-16">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* HEADING */}
         <div className="text-center pb-10">
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
             Explore Our{" "}
-            <span className="text-[#c8020e]">
-              Premium Luxury Living Spaces
-            </span>
+            <span className="text-[#c8020e]">Premium Luxury Living Spaces</span>
           </h2>
 
           <p className="mt-3 text-gray-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
@@ -252,7 +278,6 @@ export default function Units() {
 
         {/* SLIDER */}
         <div className="relative">
-
           {/* LEFT BUTTON */}
           <button
             onClick={() => scroll("left")}
@@ -292,6 +317,7 @@ export default function Units() {
                     src={item.image}
                     alt={item.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 340px"
                     className="object-cover rounded-t-[20px]"
                   />
 
@@ -307,7 +333,6 @@ export default function Units() {
                 {/* CONTENT */}
                 <div className="p-4 sm:p-5">
                   <div className="flex justify-between items-start mb-2 sm:mb-3">
-
                     {/* LOCATION */}
                     <div className="flex items-start gap-2 text-xs sm:text-sm text-gray-500">
                       <FaBuilding className="text-[#c8020e] mt-1" />
@@ -337,7 +362,6 @@ export default function Units() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
