@@ -49,6 +49,7 @@ const propertyData: Record<TabType, PropertyType[]> = {
       id: 3,
       location:
         "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
+      isNew: false,
       tag: "Private",
       title: "Community Area",
       image: "/aurellia/a3.png",
@@ -57,8 +58,8 @@ const propertyData: Record<TabType, PropertyType[]> = {
       id: 4,
       location:
         "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
-      tag: "Common Area",
-      title: "Common Area",
+      tag: "Living area",
+      title: "Living area ",
       image: "/aurellia/a4.png",
     },
   ],
@@ -173,6 +174,15 @@ const propertyData: Record<TabType, PropertyType[]> = {
       tag: "Private",
       title: "Double Sharing Room",
       image: "/sunshine/su2.jpeg",
+    },
+    {
+      id: 3,
+      location:
+        "9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
+      isNew: false,
+      tag: "Private",
+      title: "Triple Sharing Room",
+      image: "/sunshine/su3.jpeg",
     },
     {
       id: 4,
