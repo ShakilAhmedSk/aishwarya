@@ -49,10 +49,10 @@ const locations: LocationType[] = [
     subtitle: "Premium Student Living",
 
     images: [
-      "/Solaris/1.jpeg",
-      "/Solaris/2.jpeg",
-      "/Solaris/1rk.jpeg",
-      "/Solaris/common.jpeg",
+      "/solaris/1.jpeg",
+      "/solaris/2.jpeg",
+      "/solaris/1rk.jpeg",
+      "/solaris/common.jpeg",
     ],
 
     desc: "Modern lifestyle-focused living with premium rooms, elegant design, comfort, and peaceful surroundings.",
