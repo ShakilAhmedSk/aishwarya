@@ -87,14 +87,7 @@ export default function Navbar() {
                 Community
               </Link>
 
-              <Link
-                href="/stay-with-us"
-                className={`${base} ${
-                  pathname === "/stay-with-us" ? active : inactive
-                }`}
-              >
-                Stay With Us
-              </Link>
+
             </nav>
           </div>
 
@@ -112,14 +105,22 @@ export default function Navbar() {
           {/* RIGHT */}
           <div className="flex items-center gap-3 md:gap-6 text-sm">
             {/* FIND YOUR PLACE */}
-            <Link
+            {/*<Link
               href="/find-your-place"
               className={`hidden lg:block ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >
               Find Your Place
-            </Link>
+            </Link>*/}
+                          <Link
+                href="/stay-with-us"
+                className={`${base} ${
+                  pathname === "/stay-with-us" ? active : inactive
+                }`}
+              >
+                Stay With Us
+              </Link>
 
             {/* CONTACT BUTTON */}
             <button
