@@ -2,6 +2,8 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
+import LeadPopup from "../LeadForm/LeadPopup";
+
 import { FaBuilding, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 type TabType =
@@ -20,13 +22,15 @@ type PropertyType = {
   tag: string;
   title: string;
   image: string;
+  gallery?: string[];
 };
 
 const propertyData: Record<TabType, PropertyType[]> = {
   "Aishwarya Aurellia": [
     {
       id: 1,
-      location: "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
+      location:
+        "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
       isNew: false,
       tag: "Studio",
       title: "Single Sharing Room",
@@ -34,23 +38,26 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 2,
-      location: "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
-      isNew: false,         
+      location:
+        "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
+      isNew: false,
       tag: "Private",
       title: "Double Sharing Room",
       image: "/aurellia/a2.png",
     },
     {
       id: 3,
-      location: "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
+      location:
+        "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
       tag: "Private",
       title: "Community Area",
       image: "/aurellia/a3.png",
     },
     {
       id: 4,
-      location: "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
-      tag: "Studio",
+      location:
+        "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
+      tag: "Common Area",
       title: "Common Area",
       image: "/aurellia/a4.png",
     },
@@ -59,39 +66,28 @@ const propertyData: Record<TabType, PropertyType[]> = {
   "Aishwarya Estrella": [
     {
       id: 1,
-      location: "S.G palya Bangalore Christ front gate Pg",
+      location:
+        "39/8, 6th cross rd, Bharati Layout, S.G Palya. Near Christ University Back Gate.",
       isNew: true,
       tag: "Studio",
       title: "Single Sharing Room",
-      image: "/estrella/e1.jpg",
+      image: "/Estrella/1.jpeg",
     },
     {
       id: 2,
-      location: "S.G palya Bangalore Christ front gate Pg",
+      location:
+        "39/8, 6th cross rd, Bharati Layout, S.G Palya. Near Christ University Back Gate.",
       tag: "Private",
       title: "Double Sharing Room",
-      image: "/estrella/e2.jpg",
-    },
-    {
-      id: 3,
-      location: "S.G palya Bangalore Christ front gate Pg",
-      tag: "Private",
-      title: "Triple Sharing Room",
-      image: "/estrella/e3.jpg",
-    },
-    {
-      id: 4,
-      location: "S.G palya Bangalore Christ front gate Pg",
-      tag: "Studio",
-      title: "Common Area",
-      image: "/estrella/e4.jpg",
+      image: "/Estrella/2.jpeg",
     },
   ],
 
   "Aishwarya Solaris": [
     {
       id: 1,
-      location: "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
+      location:
+        "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
       isNew: true,
       tag: "Studio",
       title: "Single Sharing Room",
@@ -99,22 +95,25 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 2,
-      location: "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
+      location:
+        "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
       tag: "Private",
       title: "Double Sharing Room",
       image: "/solaris/2.jpeg",
     },
     {
       id: 3,
-      location: "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
+      location:
+        "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
       tag: "Studio",
       title: "1RK",
       image: "/solaris/1rk.jpeg",
     },
     {
       id: 4,
-      location: "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
-      tag: "Private",
+      location:
+        "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
+      tag: "Common Area",
       title: "Common Area",
       image: "/solaris/common.jpeg",
     },
@@ -123,7 +122,8 @@ const propertyData: Record<TabType, PropertyType[]> = {
   "Aishwarya 9": [
     {
       id: 1,
-      location: " building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
+      location:
+        "building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
       isNew: true,
       tag: "Studio",
       title: "Single Sharing Room",
@@ -131,22 +131,25 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 2,
-      location: " building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",  
+      location:
+        "building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
       tag: "Private",
       title: "Double Sharing Room",
       image: "/Aishwarya9/as9-2.jpeg",
     },
     {
       id: 3,
-      location: " building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
+      location:
+        "building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
       tag: "Private",
       title: "Triple Sharing Room",
       image: "/Aishwarya9/as9-3.jpeg",
     },
     {
       id: 4,
-      location: " building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
-      tag: "Studio",
+      location:
+        "building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
+      tag: "Common Area",
       title: "Common Area",
       image: "/Aishwarya9/as9-4.jpeg",
     },
@@ -155,7 +158,8 @@ const propertyData: Record<TabType, PropertyType[]> = {
   "Aishwarya Sunshine": [
     {
       id: 1,
-      location: " 9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
+      location:
+        "9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
       isNew: true,
       tag: "Studio",
       title: "Single Sharing Room",
@@ -163,25 +167,19 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 2,
-      location: " 9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
+      location:
+        "9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
       isNew: false,
       tag: "Private",
       title: "Double Sharing Room",
       image: "/sunshine/su2.jpeg",
     },
     {
-      id: 3,
-      location: " 9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
-      isNew: false,
-      tag: "Private",
-      title: "Triple Sharing Room",
-      image: "/sunshine/su3.jpeg",
-    },
-    {
       id: 4,
-      location: " 9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
+      location:
+        "9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
       isNew: false,
-      tag: "Studio",
+      tag: "Common Area",
       title: "Common Area",
       image: "/sunshine/common.jpeg",
     },
@@ -190,7 +188,8 @@ const propertyData: Record<TabType, PropertyType[]> = {
   "Aishwarya Gardenia": [
     {
       id: 1,
-      location: "2, 7 th cross rd, Bhavani nagar, S.G Palya.  Near Christ University Back Gate.",
+      location:
+        "2, 7 th cross rd, Bhavani nagar, S.G Palya. Near Christ University Back Gate.",
       isNew: true,
       tag: "Studio",
       title: "Single Sharing Room",
@@ -198,25 +197,28 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 2,
-      location: "2, 7 th cross rd, Bhavani nagar, S.G Palya.  Near Christ University Back Gate.",
+      location:
+        "2, 7 th cross rd, Bhavani nagar, S.G Palya. Near Christ University Back Gate.",
       isNew: false,
       tag: "Private",
       title: "Double Sharing Room",
       image: "/gardenia/2.jpeg",
     },
-    {
-      id: 3,
-      location: "2, 7 th cross rd, Bhavani nagar, S.G Palya.  Near Christ University Back Gate.",
-      isNew: false,
-      tag: "Private",
-      title: "Triple Sharing Room",
-      image: "/gardenia/3.jpeg",
-    },
+    // {
+    //   id: 3,
+    //   location:
+    //     "2, 7 th cross rd, Bhavani nagar, S.G Palya. Near Christ University Back Gate.",
+    //   isNew: false,
+    //   tag: "Private",
+    //   title: "Triple Sharing Room",
+    //   image: "/gardenia/3.jpeg",
+    // },
     {
       id: 4,
-      location: "2, 7 th cross rd, Bhavani nagar, S.G Palya.  Near Christ University Back Gate.",
+      location:
+        "2, 7 th cross rd, Bhavani nagar, S.G Palya. Near Christ University Back Gate.",
       isNew: false,
-      tag: "Studio",
+      tag: "Common Area",
       title: "Common Area",
       image: "/gardenia/common.jpeg",
     },
@@ -227,6 +229,10 @@ const propertyData: Record<TabType, PropertyType[]> = {
 
 export default function Units() {
   const [activeTab, setActiveTab] = useState<TabType>("Aishwarya Aurellia");
+
+  const [selectedCard, setSelectedCard] = useState<PropertyType | null>(null);
+
+  const [open, setOpen] = useState(false);
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -310,13 +316,15 @@ export default function Units() {
           {/* CARDS */}
           <div
             ref={scrollRef}
-            className="flex gap-4 sm:gap-5 overflow-x-auto no-scrollbar scroll-smooth px-12 pb-2"
+            className="flex gap-4 sm:gap-5 overflow-x-auto no-scrollbar scroll-smooth px-12"
           >
             {propertyData[activeTab].map((item) => (
               <div
                 key={item.id}
+                onClick={() => setSelectedCard(item)}
                 className="min-w-[260px] sm:min-w-[300px] md:min-w-[340px]
-                bg-white rounded-[20px] shadow-sm hover:shadow-md transition duration-300"
+                bg-white rounded-[20px] shadow-sm hover:shadow-md
+                transition duration-300 cursor-pointer"
               >
                 {/* IMAGE */}
                 <div className="relative h-[160px] sm:h-[180px] md:h-[200px] w-full">
@@ -345,10 +353,7 @@ export default function Units() {
                       <FaBuilding className="text-[#c8020e] mt-1" />
 
                       <span className="line-clamp-2 text-left">
-                        {item.location}{" "}
-                        {item.isNew && (
-                          <span className="text-gray-400">(NEW)</span>
-                        )}
+                        {item.location}
                       </span>
                     </div>
 
@@ -370,6 +375,102 @@ export default function Units() {
           </div>
         </div>
       </div>
+
+      {/* PROPERTY POPUP */}
+      {selectedCard && (
+        <div
+          className="fixed inset-0 bg-black/70 z-[9999]
+          flex items-center justify-center p-4"
+          onClick={() => setSelectedCard(null)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white w-full max-w-5xl
+            rounded-[24px] overflow-hidden
+            relative grid md:grid-cols-2"
+          >
+            {/* CLOSE */}
+            <button
+              onClick={() => setSelectedCard(null)}
+              className="absolute top-5 right-5 z-30
+              w-11 h-11 rounded-full
+              bg-white text-black
+              shadow-xl border border-gray-200
+              flex items-center justify-center
+              text-lg font-semibold
+              hover:bg-[#c8020e]
+              hover:text-white
+              transition duration-300"
+            >
+              ✕
+            </button>
+
+            {/* IMAGE */}
+            <div className="relative min-h-[320px]">
+              <Image
+                src={selectedCard.image}
+                alt={selectedCard.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* CONTENT */}
+            <div className="p-8 flex flex-col justify-center">
+              <span
+                className="bg-[#c8020e]
+                text-white text-xs
+                px-4 py-2 rounded-full
+                w-fit mb-5"
+              >
+                {selectedCard.tag}
+              </span>
+
+              <h2 className="text-3xl font-bold text-gray-900">
+                {selectedCard.title}
+              </h2>
+
+              <p className="text-gray-600 mt-5 leading-relaxed">
+                {selectedCard.location}
+              </p>
+
+              <p className="text-gray-500 mt-5 text-sm leading-relaxed">
+                Experience premium luxury student living with modern interiors,
+                comfort, security, and vibrant community spaces near Christ
+                University.
+              </p>
+
+              {/* BUTTONS */}
+              <div className="flex gap-4 mt-8">
+                <button
+                  onClick={() => setOpen(true)}
+                  className="bg-[#c8020e]
+                  hover:bg-[#b5232d]
+                  px-6 py-3 rounded-xl
+                  text-white cursor-pointer transition"
+                >
+                  Book Now
+                </button>
+
+                <button
+                  onClick={() => setSelectedCard(null)}
+                  className="bg-gray-100
+                   hover:bg-gray-200
+                   text-gray-800
+                   px-6 py-3 rounded-xl
+                   cursor-pointer transition
+                   font-medium"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* LEAD POPUP */}
+      {open && <LeadPopup onClose={() => setOpen(false)} open={open} />}
     </section>
   );
 }
