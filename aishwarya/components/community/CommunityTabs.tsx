@@ -3,18 +3,14 @@
 import { useState } from "react";
 import "./CommunityTabs.css";
 
-const years = [
+const categories = [
   "Halloween",
-  "2022",
-  "2023",
-  "2024",
-  "2025",
-  "2026",
+  "Galentine",
 ] as const;
 
-type YearType = (typeof years)[number];
+type CategoryType = (typeof categories)[number];
 
-const galleryData: Record<YearType, string[]> = {
+const galleryData: Record<CategoryType, string[]> = {
   Halloween: [
     "/halloween/h1.png",
     "/halloween/h2.png",
@@ -22,47 +18,22 @@ const galleryData: Record<YearType, string[]> = {
     "/halloween/h4.png",
   ],
 
-  "2022": [
-    "/g5.jpg",
-    "/g6.jpg",
-    "/g7.jpg",
-    "/g8.jpg",
-  ],
-
-  "2023": [
-    "/g9.jpg",
-    "/g10.jpg",
-    "/g11.jpg",
-    "/g12.jpg",
-  ],
-
-  "2024": [
-    "/g1.jpg",
-    "/g5.jpg",
-    "/g9.jpg",
-    "/g3.jpg",
-  ],
-
-  "2025": [
-    "/g2.jpg",
-    "/g6.jpg",
-    "/g10.jpg",
-    "/g4.jpg",
-  ],
-
-  "2026": [
-    "/g7.jpg",
-    "/g8.jpg",
-    "/g11.jpg",
-    "/g12.jpg",
+  Galentine: [
+    "/g1.png",
+    "/g2.png",
+    "/g3.png",
+    "/g4.png",
   ],
 };
 
 const CommunityTabs = () => {
-  const [activeYear, setActiveYear] =
-    useState<YearType>(years[0]);
+  const [activeCategory, setActiveCategory] =
+    useState<CategoryType>(categories[0]);
 
-  const images = galleryData[activeYear];
+  const [selectedImage, setSelectedImage] =
+    useState<string | null>(null);
+
+  const images = galleryData[activeCategory];
 
   return (
     <section className="ct-sec">
@@ -73,37 +44,66 @@ const CommunityTabs = () => {
 
         <p>
           A glimpse of memories, events, and experiences
-          shared by our residents over the years.
+          shared by our residents.
         </p>
       </div>
 
-      {/* YEAR TABS */}
+      {/* CATEGORY TABS */}
       <div className="ct-tabs">
-        {years.map((year) => (
+        {categories.map((category) => (
           <button
-            key={year}
+            key={category}
             className={`ct-tab ${
-              activeYear === year ? "active" : ""
+              activeCategory === category
+                ? "active"
+                : ""
             }`}
-            onClick={() => setActiveYear(year)}
+            onClick={() =>
+              setActiveCategory(category)
+            }
           >
-            {year}
-          </button> 
+            {category}
+          </button>
         ))}
       </div>
 
       {/* GALLERY */}
       <div className="ct-gallery">
         {images.map((img, i) => (
-          <div className="ct-card" key={i}>
+          <div
+            className="ct-card"
+            key={i}
+            onClick={() =>
+              setSelectedImage(img)
+            }
+          >
             <img
               src={img}
-              alt={`community-${i}`}
+              alt={`community-${i + 1}`}
             />
           </div>
         ))}
       </div>
 
+      {/* LIGHTBOX */}
+      {selectedImage && (
+        <div
+          className="ct-lightbox"
+          onClick={() =>
+            setSelectedImage(null)
+          }
+        >
+          <span className="ct-close">
+            ×
+          </span>
+
+          <img
+            src={selectedImage}
+            alt="Full View"
+            className="ct-lightbox-img"
+          />
+        </div>
+      )}
     </section>
   );
 };
