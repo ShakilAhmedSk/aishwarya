@@ -26,7 +26,7 @@ const propertyData: Record<TabType, PropertyType[]> = {
   "Aishwarya Aurellia": [
     {
       id: 1,
-      location: "S.g palya, bhavani nagar Christ back gate Pg",
+      location: "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
       isNew: false,
       tag: "Studio",
       title: "Single Sharing Room",
@@ -34,7 +34,7 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 2,
-      location: "S.g palya, bhavani nagar Christ back gate Pg",
+      location: "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
       isNew: false,         
       tag: "Private",
       title: "Double Sharing Room",
@@ -42,14 +42,14 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 3,
-      location: "S.g palya, bhavani nagar Christ back gate Pg",
+      location: "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
       tag: "Private",
       title: "Community Area",
       image: "/aurellia/a3.png",
     },
     {
       id: 4,
-      location: "S.g palya, bhavani nagar Christ back gate Pg",
+      location: "1st cross, Venkateshwara Layout, S.G Palya. Near Christ University Front Gate",
       tag: "Studio",
       title: "Common Area",
       image: "/aurellia/a4.png",
@@ -123,7 +123,7 @@ const propertyData: Record<TabType, PropertyType[]> = {
   "Aishwarya 9": [
     {
       id: 1,
-      location: " 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
+      location: " building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
       isNew: true,
       tag: "Studio",
       title: "Single Sharing Room",
@@ -131,21 +131,21 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 2,
-      location: " 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",  
+      location: " building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",  
       tag: "Private",
       title: "Double Sharing Room",
       image: "/Aishwarya9/as9-2.jpeg",
     },
     {
       id: 3,
-      location: " 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
+      location: " building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
       tag: "Private",
       title: "Triple Sharing Room",
       image: "/Aishwarya9/as9-3.jpeg",
     },
     {
       id: 4,
-      location: " 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
+      location: " building no 9, 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
       tag: "Studio",
       title: "Common Area",
       image: "/Aishwarya9/as9-4.jpeg",
