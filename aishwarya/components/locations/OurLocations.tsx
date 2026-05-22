@@ -93,10 +93,10 @@ const locations: LocationType[] = [
     subtitle: "Near Christ Back Gate",
 
     images: [
-      "/Gardenia/1.jpeg",
-      "/Gardenia/2.jpeg",
-      "/Gardenia/3.jpeg",
-      "/Gardenia/common.jpeg",
+      "/gardenia/1.jpeg",
+      "/gardenia/2.jpeg",
+      "/gardenia/3.jpeg",
+      "/gardenia/common.jpeg",
     ],
 
     desc: "Luxury-inspired living with premium comfort, safety, and vibrant student-friendly surroundings.",
