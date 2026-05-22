@@ -27,7 +27,7 @@ const propertyData: Record<TabType, PropertyType[]> = {
     {
       id: 1,
       location: "S.g palya, bhavani nagar Christ back gate Pg",
-      isNew: true,
+      isNew: false,
       tag: "Studio",
       title: "Single Sharing Room",
       image: "/aurellia/a1.png",
@@ -35,6 +35,7 @@ const propertyData: Record<TabType, PropertyType[]> = {
     {
       id: 2,
       location: "S.g palya, bhavani nagar Christ back gate Pg",
+      isNew: false,         
       tag: "Private",
       title: "Double Sharing Room",
       image: "/aurellia/a2.png",
@@ -90,7 +91,7 @@ const propertyData: Record<TabType, PropertyType[]> = {
   "Aishwarya Solaris": [
     {
       id: 1,
-      location: "S.g palya Venkateshwara layout Pg",
+      location: "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
       isNew: true,
       tag: "Studio",
       title: "Single Sharing Room",
@@ -98,21 +99,21 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 2,
-      location: "S.g palya Venkateshwara layout Pg",
+      location: "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
       tag: "Private",
       title: "Double Sharing Room",
       image: "/solaris/2.jpeg",
     },
     {
       id: 3,
-      location: "S.g palya Venkateshwara layout Pg",
+      location: "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
       tag: "Studio",
       title: "1RK",
       image: "/solaris/1rk.jpeg",
     },
     {
       id: 4,
-      location: "S.g palya Venkateshwara layout Pg",
+      location: "2nd cross, Venkateshwara Layout. Near Christ University Front Gate",
       tag: "Private",
       title: "Common Area",
       image: "/solaris/common.jpeg",
@@ -122,7 +123,7 @@ const propertyData: Record<TabType, PropertyType[]> = {
   "Aishwarya 9": [
     {
       id: 1,
-      location: "Dairy colony, Adugodi Pg",
+      location: " 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
       isNew: true,
       tag: "Studio",
       title: "Single Sharing Room",
@@ -130,23 +131,23 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 2,
-      location: "Dairy colony, Adugodi Pg",
+      location: " 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",  
       tag: "Private",
       title: "Double Sharing Room",
       image: "/Aishwarya9/as9-2.jpeg",
     },
     {
       id: 3,
-      location: "Dairy colony, Adugodi Pg",
+      location: " 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
       tag: "Private",
       title: "Triple Sharing Room",
       image: "/Aishwarya9/as9-3.jpeg",
     },
     {
       id: 4,
-      location: "Dairy colony, Adugodi Pg",
+      location: " 2nd cross rd, dairy colony, adugodi. Near Christ University Front Gate",
       tag: "Studio",
-      title: "1RK",
+      title: "Common Area",
       image: "/Aishwarya9/as9-4.jpeg",
     },
   ],
@@ -154,7 +155,7 @@ const propertyData: Record<TabType, PropertyType[]> = {
   "Aishwarya Sunshine": [
     {
       id: 1,
-      location: "S.g palya, bharathi layout Pg",
+      location: " 9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
       isNew: true,
       tag: "Studio",
       title: "Single Sharing Room",
@@ -162,21 +163,24 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 2,
-      location: "S.g palya, bharathi layout Pg",
+      location: " 9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
+      isNew: false,
       tag: "Private",
       title: "Double Sharing Room",
       image: "/sunshine/su2.jpeg",
     },
     {
       id: 3,
-      location: "S.g palya, bharathi layout Pg",
+      location: " 9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
+      isNew: false,
       tag: "Private",
       title: "Triple Sharing Room",
       image: "/sunshine/su3.jpeg",
     },
     {
       id: 4,
-      location: "S.g palya, bharathi layout Pg",
+      location: " 9, 1st cross rd, Bharati Layout, S.g palya. Near Christ University Back Gate",
+      isNew: false,
       tag: "Studio",
       title: "Common Area",
       image: "/sunshine/common.jpeg",
@@ -186,7 +190,7 @@ const propertyData: Record<TabType, PropertyType[]> = {
   "Aishwarya Gardenia": [
     {
       id: 1,
-      location: "Bhavani Nagar, S.G Palya Pg",
+      location: "2, 7 th cross rd, Bhavani nagar, S.G Palya.  Near Christ University Back Gate.",
       isNew: true,
       tag: "Studio",
       title: "Single Sharing Room",
@@ -194,21 +198,24 @@ const propertyData: Record<TabType, PropertyType[]> = {
     },
     {
       id: 2,
-      location: "Bhavani Nagar, S.G Palya Pg",
+      location: "2, 7 th cross rd, Bhavani nagar, S.G Palya.  Near Christ University Back Gate.",
+      isNew: false,
       tag: "Private",
       title: "Double Sharing Room",
       image: "/gardenia/2.jpeg",
     },
     {
       id: 3,
-      location: "Bhavani Nagar, S.G Palya Pg",
+      location: "2, 7 th cross rd, Bhavani nagar, S.G Palya.  Near Christ University Back Gate.",
+      isNew: false,
       tag: "Private",
       title: "Triple Sharing Room",
       image: "/gardenia/3.jpeg",
     },
     {
       id: 4,
-      location: "Bhavani Nagar, S.G Palya Pg",
+      location: "2, 7 th cross rd, Bhavani nagar, S.G Palya.  Near Christ University Back Gate.",
+      isNew: false,
       tag: "Studio",
       title: "Common Area",
       image: "/gardenia/common.jpeg",
