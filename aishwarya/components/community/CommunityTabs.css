@@ -99,6 +99,7 @@
   animation: zoomIn 0.3s ease;
 }
 
+/* CLOSE BUTTON */
 .ct-close {
   position: absolute;
   top: 20px;
@@ -114,11 +115,42 @@
   transform: scale(1.1);
 }
 
+/* ARROWS */
+.ct-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 34px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.ct-arrow:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.ct-prev {
+  left: 30px;
+}
+
+.ct-next {
+  right: 30px;
+}
+
 /* ANIMATIONS */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -129,6 +161,7 @@
     transform: scale(0.85);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -158,5 +191,19 @@
   .ct-close {
     right: 20px;
     font-size: 38px;
+  }
+
+  .ct-arrow {
+    width: 46px;
+    height: 46px;
+    font-size: 26px;
+  }
+
+  .ct-prev {
+    left: 10px;
+  }
+
+  .ct-next {
+    right: 10px;
   }
 }

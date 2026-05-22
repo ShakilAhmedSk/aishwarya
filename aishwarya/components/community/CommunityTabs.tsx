@@ -30,10 +30,47 @@ const CommunityTabs = () => {
   const [activeCategory, setActiveCategory] =
     useState<CategoryType>(categories[0]);
 
-  const [selectedImage, setSelectedImage] =
-    useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] =
+    useState<number | null>(null);
 
   const images = galleryData[activeCategory];
+
+  // OPEN IMAGE
+  const openImage = (index: number) => {
+    setSelectedIndex(index);
+  };
+
+  // CLOSE IMAGE
+  const closeImage = () => {
+    setSelectedIndex(null);
+  };
+
+  // NEXT IMAGE
+  const nextImage = (
+    e: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    e.stopPropagation();
+
+    if (selectedIndex === null) return;
+
+    setSelectedIndex(
+      (selectedIndex + 1) % images.length
+    );
+  };
+
+  // PREVIOUS IMAGE
+  const prevImage = (
+    e: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    e.stopPropagation();
+
+    if (selectedIndex === null) return;
+
+    setSelectedIndex(
+      (selectedIndex - 1 + images.length) %
+        images.length
+    );
+  };
 
   return (
     <section className="ct-sec">
@@ -43,8 +80,8 @@ const CommunityTabs = () => {
         <h2>Our Community Moments</h2>
 
         <p>
-          A glimpse of memories, events, and experiences
-          shared by our residents.
+          A glimpse of memories, events, and
+          experiences shared by our residents.
         </p>
       </div>
 
@@ -58,9 +95,10 @@ const CommunityTabs = () => {
                 ? "active"
                 : ""
             }`}
-            onClick={() =>
-              setActiveCategory(category)
-            }
+            onClick={() => {
+              setActiveCategory(category);
+              setSelectedIndex(null);
+            }}
           >
             {category}
           </button>
@@ -73,9 +111,7 @@ const CommunityTabs = () => {
           <div
             className="ct-card"
             key={i}
-            onClick={() =>
-              setSelectedImage(img)
-            }
+            onClick={() => openImage(i)}
           >
             <img
               src={img}
@@ -86,22 +122,40 @@ const CommunityTabs = () => {
       </div>
 
       {/* LIGHTBOX */}
-      {selectedImage && (
+      {selectedIndex !== null && (
         <div
           className="ct-lightbox"
-          onClick={() =>
-            setSelectedImage(null)
-          }
+          onClick={closeImage}
         >
+
+          {/* CLOSE BUTTON */}
           <span className="ct-close">
             ×
           </span>
 
+          {/* PREV BUTTON */}
+          <button
+            className="ct-arrow ct-prev"
+            onClick={prevImage}
+          >
+            ❮
+          </button>
+
+          {/* IMAGE */}
           <img
-            src={selectedImage}
+            src={images[selectedIndex]}
             alt="Full View"
             className="ct-lightbox-img"
           />
+
+          {/* NEXT BUTTON */}
+          <button
+            className="ct-arrow ct-next"
+            onClick={nextImage}
+          >
+            ❯
+          </button>
+
         </div>
       )}
     </section>
