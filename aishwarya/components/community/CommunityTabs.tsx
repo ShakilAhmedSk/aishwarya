@@ -19,10 +19,10 @@ const galleryData: Record<CategoryType, string[]> = {
   ],
 
   Galentine: [
-    "/g1.png",
-    "/g2.png",
-    "/g3.png",
-    "/g4.png",
+    "/Galentine/g1.png",
+    "/Galentine/g2.png",
+    "/Galentine/g3.png",
+    "/Galentine/g4.png",
   ],
 };
 
