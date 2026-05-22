@@ -16,7 +16,7 @@ const Stay = () => {
       <div className="stay-hero-unique">
         {/* Background Image */}
         <Image
-          src="/stay.jpeg"
+          src="/stay-with-us.jpeg"
           alt="Stay with us"
           fill
           priority
