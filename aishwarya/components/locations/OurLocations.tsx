@@ -79,9 +79,9 @@ const locations: LocationType[] = [
     subtitle: "Near Christ Back Gate",
 
     images: [
-      "/Sunshine/su1.jpeg",
-      "/Sunshine/su2.jpeg",
-      "/Sunshine/common.jpeg",
+      "/sunshine/su1.jpeg",
+      "/sunshine/su2.jpeg",
+      "/sunshine/common.jpeg",
     ],
 
     desc: "Bright interiors, peaceful atmosphere, and modern amenities crafted for comfortable community living.",
